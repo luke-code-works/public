@@ -1,0 +1,38 @@
+{
+    "plugins": ["prettier-plugin-organize-attributes", "prettier-plugin-organize-imports", "prettier-plugin-css-order"],
+    "printWidth": 120,
+    "tabWidth": 4,
+    "bracketSameLine": true,
+    "bracketSpacing": false,
+    "singleQuote": true,
+    "singleAttributePerLine": true,
+    "overrides": [
+        {
+            "files": ["**/*.css", "**/*.scss"],
+            "options": {
+                "cssDeclarationSorterOrder": "smacss"
+            }
+        },
+        {
+            "files": ["**/*.html"],
+            "options": {
+                "singleQuote": false,
+                "quoteProps": "preserve"
+            }
+        },
+        {
+            "files": ["**/*.component.html"],
+            "options": {
+                "attributeGroups": [
+                    "$ANGULAR_STRUCTURAL_DIRECTIVE",
+                    "$ANGULAR_ELEMENT_REF",
+                    "$CODE_GUIDE",
+                    "^\\w",
+                    "$ANGULAR_INPUT",
+                    "$ANGULAR_OUTPUT",
+                    "$ANGULAR_TWO_WAY_BINDING"
+                ]
+            }
+        }
+    ]
+}
