@@ -2,7 +2,9 @@
   "name": "@luke-code-works/public",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": { 
+    "lint": "nx exec -- nx run-many --target=lint --all"
+  },
   "nx": {},
   "private": true,
   "dependencies": {
@@ -26,7 +28,7 @@
     "@angular/language-service": "~19.1.0",
     "@eslint/js": "^9.8.0",
     "@nx/angular": "20.4.6",
-    "@nx/eslint": "20.4.6",
+    "@nx/eslint": "^20.4.6",
     "@nx/eslint-plugin": "20.4.6",
     "@nx/jest": "20.4.6",
     "@nx/js": "20.4.6",
