@@ -28,5 +28,6 @@
         "titleBar.inactiveBackground": "#4c049999",
         "titleBar.inactiveForeground": "#e7e7e799"
     },
-    "angular.enable-strict-mode-prompt": false
+    "angular.enable-strict-mode-prompt": false,
+    "tailwindCSS.lint.invalidConfigPath": "warning"
 }
