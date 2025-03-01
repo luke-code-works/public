@@ -1,0 +1,5 @@
+/* Used for vscode tailwind css intellisense extension
+*  - to date extension searches for @import ... in css only)
+*  - remove if bug fixed
+*/
+@import 'tailwindcss';
