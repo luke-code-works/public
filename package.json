@@ -4,7 +4,7 @@
     "license": "MIT",
     "scripts": {
         "check-format": "nx exec -- prettier --config .prettierrc.json --ignore-path .prettierignore --ignore-unknown --check \"{**/*,*}.{js,ts,html,scss,jsx,tsx,vue,astro,json}\"",
-        "lint": "nx exec -- nx run-many --target=lint --all"
+        "lint": "nx exec -- nx run-many --target=lint --all --exclude=@luke-code-works/public"
     },
     "nx": {},
     "private": true,
