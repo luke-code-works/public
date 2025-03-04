@@ -1,0 +1,4 @@
+:host {
+    @reference 'tailwindcss';
+    @apply relative mt-12 bg-[var(--app-footer-container-color)];
+}
