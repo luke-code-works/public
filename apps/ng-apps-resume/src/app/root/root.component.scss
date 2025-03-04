@@ -1,0 +1,4 @@
+:host {
+    @reference "tailwindcss";
+    @apply flex flex-col bg-[var(--root-bg-color)];
+}

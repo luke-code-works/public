@@ -1,6 +1,18 @@
 @use 'tailwindcss';
 @use '@angular/material' as mat;
 
+.light-mode {
+    // TODO: Use or remove #0f1924 #002060;
+    --root-bg-color: white;
+
+    --app-nav-title-text-color: #004f8b;
+    --app-nav-fragments-color: #6a7282;
+    --app-nav-fragments-hover-color: #004f8b;
+    --app-nav-fragments-active-color: #004f8b;
+
+    --app-footer-container-color: #002060;
+}
+
 @mixin color-scheme-styles {
     :root {
         color-scheme: dark;
@@ -19,18 +31,20 @@
     :root {
         @include mat.theme(
             (
-                color: mat.$violet-palette,
+                color: mat.$spring-green-palette,
                 typography: Roboto,
                 density: 0,
             )
         );
     }
+}
 
-    body {
-        background: var(--mat-sys-surface);
-        color: var(--mat-sys-on-surface);
+@mixin smooth-scroll-behavior {
+    html {
+        scroll-behavior: smooth;
     }
 }
 
 @include color-scheme-styles();
 @include material-theme-styles();
+@include smooth-scroll-behavior();
