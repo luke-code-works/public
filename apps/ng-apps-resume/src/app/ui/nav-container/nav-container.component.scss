@@ -1,0 +1,4 @@
+:host {
+    @reference "tailwindcss";
+    @apply flex items-center justify-between p-4 mx-auto container;
+}

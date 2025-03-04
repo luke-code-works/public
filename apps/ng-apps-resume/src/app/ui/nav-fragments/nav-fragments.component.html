@@ -1,0 +1,13 @@
+@for (fragmentConfig of service.fragmentConfigs(); track $index) {
+    <!-- IMPL: Translate -->
+    <div
+        class="rounded-lg px-3 py-2 hover:text-[var(--app-nav-fragments-hover-color)] ease-in duration-200 hover:cursor-pointer select-none"
+        [ngClass]="{'text-[var(--app-nav-fragments-active-color)]': activeRouteFragment() === fragmentConfig.id}"
+        [attr.aria-label]="fragmentConfig.translationKey">
+        <a
+            [routerLink]="['/']"
+            [fragment]="fragmentConfig.id">
+            {{ fragmentConfig.translationKey }}
+        </a>
+    </div>
+}
