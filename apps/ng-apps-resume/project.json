@@ -13,7 +13,6 @@
                 "outputPath": "dist/apps/ng-apps-resume",
                 "index": "apps/ng-apps-resume/src/index.html",
                 "browser": "apps/ng-apps-resume/src/main.ts",
-                "polyfills": ["zone.js"],
                 "tsConfig": "apps/ng-apps-resume/tsconfig.app.json",
                 "inlineStyleLanguage": "scss",
                 "assets": [
