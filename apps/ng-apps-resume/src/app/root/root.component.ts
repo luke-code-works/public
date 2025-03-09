@@ -6,12 +6,20 @@ import {provideNavigation} from '../ui/nav-container/provider';
 import {NavFragmentsComponent} from '../ui/nav-fragments/nav-fragments.component';
 import {withFragmentNavigation} from '../ui/nav-fragments/provider';
 import {NavTitleComponent} from '../ui/nav-title/nav-title.component';
+import {SparklingStarsParticleBackgroundComponent} from '../ui/sparkling-stars-particle-background/sparkling-stars-particle-background.component';
 
 @Component({
     selector: 'app-root,body[app-root]',
     templateUrl: './root.component.html',
     styleUrl: './root.component.scss',
     providers: [provideNavigation(withFragmentNavigation())],
-    imports: [NavContainerComponent, NavTitleComponent, NavFragmentsComponent, RouterOutlet, FooterContainerComponent],
+    imports: [
+        SparklingStarsParticleBackgroundComponent,
+        NavContainerComponent,
+        NavTitleComponent,
+        NavFragmentsComponent,
+        RouterOutlet,
+        FooterContainerComponent,
+    ],
 })
 export class RootComponent {}
