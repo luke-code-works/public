@@ -1,6 +1,16 @@
 @use 'tailwindcss';
 @use '@angular/material' as mat;
 
+@mixin scrolling-defaults {
+    html {
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+    }
+    body {
+        overflow-x: hidden;
+    }
+}
+
 .light-mode {
     // TODO: Use or remove #0f1924 #002060;
     --root-bg-color: white;
@@ -39,12 +49,6 @@
     }
 }
 
-@mixin smooth-scroll-behavior {
-    html {
-        scroll-behavior: smooth;
-    }
-}
-
+@include scrolling-defaults();
 @include color-scheme-styles();
 @include material-theme-styles();
-@include smooth-scroll-behavior();
