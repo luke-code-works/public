@@ -28,7 +28,7 @@ export class SparklingStarsParticleBackgroundComponent {
 const sparklingStarsParticleConfig: RecursivePartial<IOptions> = {
     preset: 'stars',
     fpsLimit: 8,
-    delay: 5,
+    delay: 2,
     background: {
         color: {
             value: 'none',

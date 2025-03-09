@@ -1,4 +1,4 @@
-import {NavigationFeature} from '../nav-container/provider';
+import {NavigationFeature} from '../../util/navigation/provider';
 import {NavFragmentConfigService} from './nav-fragment-config.service';
 
 export function withFragmentNavigation(): NavigationFeature {

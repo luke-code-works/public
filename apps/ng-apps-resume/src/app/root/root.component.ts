@@ -1,12 +1,12 @@
 import {Component} from '@angular/core';
 import {RouterOutlet} from '@angular/router';
 import {FooterContainerComponent} from '../ui/footer-container/footer-container.component';
-import {NavContainerComponent} from '../ui/nav-container/nav-container.component';
-import {provideNavigation} from '../ui/nav-container/provider';
+import {HeaderContainerComponent} from '../ui/header-container/header-container.component';
+import {HeaderTitleComponent} from '../ui/header-title/header-title.component';
 import {NavFragmentsComponent} from '../ui/nav-fragments/nav-fragments.component';
 import {withFragmentNavigation} from '../ui/nav-fragments/provider';
-import {NavTitleComponent} from '../ui/nav-title/nav-title.component';
 import {SparklingStarsParticleBackgroundComponent} from '../ui/sparkling-stars-particle-background/sparkling-stars-particle-background.component';
+import {provideNavigation} from '../util/navigation/provider';
 
 @Component({
     selector: 'app-root,body[app-root]',
@@ -15,8 +15,8 @@ import {SparklingStarsParticleBackgroundComponent} from '../ui/sparkling-stars-p
     providers: [provideNavigation(withFragmentNavigation())],
     imports: [
         SparklingStarsParticleBackgroundComponent,
-        NavContainerComponent,
-        NavTitleComponent,
+        HeaderContainerComponent,
+        HeaderTitleComponent,
         NavFragmentsComponent,
         RouterOutlet,
         FooterContainerComponent,

@@ -1,0 +1,4 @@
+:host {
+    @reference "tailwindcss";
+    @apply select-none text-3xl text-nowrap text-[var(--app-nav-title-text-color)];
+}
