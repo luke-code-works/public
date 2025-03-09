@@ -3,12 +3,12 @@ import {Router} from '@angular/router';
 import {ScrambledTextDirective} from '../scrambled-text/scrambled-text.directive';
 
 @Component({
-    selector: 'app-nav-title',
-    templateUrl: './nav-title.component.html',
-    styleUrl: './nav-title.component.scss',
+    selector: 'app-header-title',
+    templateUrl: './header-title.component.html',
+    styleUrl: './header-title.component.scss',
     imports: [ScrambledTextDirective],
 })
-export class NavTitleComponent {
+export class HeaderTitleComponent {
     private router = inject(Router);
 
     title = input.required<string>();
