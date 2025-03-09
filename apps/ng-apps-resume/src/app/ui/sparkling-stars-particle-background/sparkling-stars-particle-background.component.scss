@@ -2,8 +2,8 @@
     @reference "tailwindcss";
     @apply fixed inset-0 m-0 p-0 -z-10;
 
-    animation-duration: 20s;
-    animation-delay: 5s;
+    animation-duration: 16s;
+    animation-delay: 2s;
     animation-name: fadein;
 
     @keyframes fadein {
