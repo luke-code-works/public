@@ -1,5 +1,6 @@
 @use 'tailwindcss';
 @use '@angular/material' as mat;
+@use 'sass:meta';
 
 @mixin height-defaults {
     html {
@@ -54,7 +55,12 @@
     }
 }
 
+@mixin key-material-symbols() {
+    @include meta.load-css('node_modules/material-symbols');
+}
+
 @include height-defaults();
 @include scrolling-defaults();
 @include color-scheme-styles();
 @include material-theme-styles();
+@include key-material-symbols()
