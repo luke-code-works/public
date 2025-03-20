@@ -1,0 +1,11 @@
+FROM nginx:stable-alpine
+
+RUN apk update && apk upgrade
+
+WORKDIR /etc/nginx/conf.d
+COPY apps/ng-apps-resume/.docker/nginx/default.conf .
+RUN apk add dos2unix && dos2unix *
+
+WORKDIR /usr/share/nginx/html
+RUN rm -rf *
+COPY dist/apps/ng-apps-resume .
