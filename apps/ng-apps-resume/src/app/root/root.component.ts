@@ -3,9 +3,9 @@ import {RouterOutlet} from '@angular/router';
 import {FooterContainerComponent} from '../ui/footer-container/footer-container.component';
 import {HeaderContainerComponent} from '../ui/header-container/header-container.component';
 import {HeaderTitleComponent} from '../ui/header-title/header-title.component';
-import {NavFragmentsComponent} from '../ui/nav-fragments/nav-fragments.component';
 import {withFragmentNavigation} from '../ui/nav-fragments/provider';
 import {SparklingStarsParticleBackgroundComponent} from '../ui/sparkling-stars-particle-background/sparkling-stars-particle-background.component';
+import {XorCipherPipe} from '../ui/xor-cipher/xor-cipher.pipe';
 import {provideNavigation} from '../util/navigation/provider';
 
 @Component({
@@ -17,9 +17,9 @@ import {provideNavigation} from '../util/navigation/provider';
         SparklingStarsParticleBackgroundComponent,
         HeaderContainerComponent,
         HeaderTitleComponent,
-        NavFragmentsComponent,
         RouterOutlet,
         FooterContainerComponent,
+        XorCipherPipe,
     ],
 })
 export class RootComponent {}
