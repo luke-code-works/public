@@ -56,6 +56,7 @@
                     "buildTarget": "@luke-code-works/ng-apps-resume:build:production"
                 },
                 "development": {
+                    "host": "0.0.0.0",
                     "buildTarget": "@luke-code-works/ng-apps-resume:build:development"
                 }
             },
