@@ -1,5 +1,6 @@
 :host {
     @reference "tailwindcss";
+    @apply block;
     @apply fixed inset-0 m-0 p-0 -z-10;
 
     animation-duration: 16s;

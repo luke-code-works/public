@@ -5,6 +5,7 @@ import {NavFragmentConfigService} from '../nav-fragments/nav-fragment-config.ser
 @Component({
     selector: 'app-home',
     templateUrl: './home.component.html',
+    styleUrl: './home.component.scss',
     imports: [MatIconModule],
 })
 export class HomeComponent {
