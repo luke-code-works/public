@@ -26,7 +26,7 @@
     --app-nav-fragments-hover-color: #f050f8;
     --app-nav-fragments-active-color: #f050f8;
 
-    --app-footer-container-color: #19004a;
+    --app-header-container-color: color-mix(in oklab, #19004a 65%, transparent);
 }
 
 @mixin color-scheme-styles {
@@ -63,4 +63,4 @@
 @include scrolling-defaults();
 @include color-scheme-styles();
 @include material-theme-styles();
-@include key-material-symbols()
+@include key-material-symbols();
