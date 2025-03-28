@@ -1,5 +1,6 @@
 :host {
     @reference 'tailwindcss';
+    @apply block;
     @apply relative;
 
     .aurora {

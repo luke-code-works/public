@@ -1,5 +1,6 @@
 :host {
     @reference "tailwindcss";
+    @apply block;
     @apply sticky top-0 z-10;
     @apply h-16;
     @apply backdrop-blur-xl;
