@@ -1,4 +1,4 @@
-import {Component, ElementRef, inject} from '@angular/core';
+import {ChangeDetectionStrategy, Component, ElementRef, inject} from '@angular/core';
 import {IOptions, RecursivePartial, tsParticles} from '@tsparticles/engine';
 import {loadStarsPreset} from '@tsparticles/preset-stars';
 
@@ -6,6 +6,7 @@ import {loadStarsPreset} from '@tsparticles/preset-stars';
     selector: 'app-sparkling-stars-particle-background',
     templateUrl: './sparkling-stars-particle-background.component.html',
     styleUrl: './sparkling-stars-particle-background.component.scss',
+    changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SparklingStarsParticleBackgroundComponent {
     private elementRef = inject(ElementRef);
