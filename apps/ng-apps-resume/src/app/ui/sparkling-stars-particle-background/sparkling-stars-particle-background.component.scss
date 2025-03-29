@@ -1,9 +1,9 @@
 :host {
     @reference "tailwindcss";
     @apply block;
-    @apply fixed inset-0 m-0 p-0 -z-10;
+    @apply relative;
 
-    animation-duration: 16s;
+    animation-duration: 12s;
     animation-delay: 2s;
     animation-name: fadein;
 

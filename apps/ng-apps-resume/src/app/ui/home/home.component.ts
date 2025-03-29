@@ -1,12 +1,13 @@
 import {Component, inject} from '@angular/core';
 import {MatIconModule} from '@angular/material/icon';
 import {NavFragmentConfigService} from '../nav-fragments/nav-fragment-config.service';
+import {SparklingStarsParticleBackgroundComponent} from '../sparkling-stars-particle-background/sparkling-stars-particle-background.component';
 
 @Component({
     selector: 'app-home',
     templateUrl: './home.component.html',
     styleUrl: './home.component.scss',
-    imports: [MatIconModule],
+    imports: [MatIconModule, SparklingStarsParticleBackgroundComponent],
 })
 export class HomeComponent {
     constructor() {
