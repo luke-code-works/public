@@ -18,7 +18,7 @@ export class HeaderTitleComponent {
 
     @HostListener('click')
     protected click() {
-        this.router.navigate([]);
+        this.router.navigate(['']);
         this.scrambledTextDirective()?.scramble('redo');
     }
 }
