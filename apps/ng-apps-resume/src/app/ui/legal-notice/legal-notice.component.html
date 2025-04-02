@@ -3,11 +3,23 @@
         <h1 class="!mt-0">Impressum</h1>
         <h2>Diensteanbieter</h2>
         <ul class="list-outside list-disc pl-4">
-            <li>{{ "3f001b04010d331403161743050c1506" | xorCipher }}</li>
-            <li>{{ "3d1a020100440a125053474f" | xorCipher }}</li>
-            <li>{{ "474249544a0d30831e0c015b081b1415" | xorCipher }}</li>
-            <li>Telefon: {{ "584149455a1d4d554150451e475b535615595353" | xorCipher }}</li>
-            <li>E-Mail: {{ "1f001b040103121a1c041c494f0813484a00040e0d03080a14" | xorCipher }}</li>
+            <li>
+                <app-text-obfuscation [text]="'3f001b04010d331403161743050c1506' | xorCipher" />
+            </li>
+            <li>
+                <app-text-obfuscation [text]="'3d1a020100440a125053474f' | xorCipher" />
+            </li>
+            <li>
+                <app-text-obfuscation [text]="'474249544a0d30831e0c015b081b1415' | xorCipher" />
+            </li>
+            <li>
+                Telefon:
+                <app-text-obfuscation [text]="'584149455a1d4d554150451e475b535615595353' | xorCipher" />
+            </li>
+            <li>
+                E-Mail:
+                <app-text-obfuscation [text]="'1f001b040103121a1c041c49270e0a0044014b040e40' | xorCipher" />
+            </li>
         </ul>
         <!-- <h2>Social Media und andere Onlinepräsenzen</h2>
         <p>Dieses Impressum gilt auch für die folgenden Social-Media-Präsenzen und Onlineprofile:</p>

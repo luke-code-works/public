@@ -1,0 +1,13 @@
+@for (segment of segments(); track $index) {
+    @switch (segment[0]) {
+        @case ("normal") {
+            <span>{{ segment[1] }}</span>
+        }
+        @case ("zero-saturated") {
+            <span>{{ segment[1] }}</span>
+        }
+        @case ("hidden") {
+            <span class="hidden">{{ segment[1] }}</span>
+        }
+    }
+}
