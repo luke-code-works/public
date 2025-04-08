@@ -2,7 +2,7 @@ import {NgClass} from '@angular/common';
 import {ChangeDetectionStrategy, Component, inject} from '@angular/core';
 import {toSignal} from '@angular/core/rxjs-interop';
 import {ActivatedRoute, RouterLink} from '@angular/router';
-import {NavFragmentConfigService} from './nav-fragment-config.service';
+import {NavFragmentService} from './nav-fragment.service';
 
 @Component({
     selector: 'app-nav-fragments',
@@ -12,7 +12,7 @@ import {NavFragmentConfigService} from './nav-fragment-config.service';
     imports: [RouterLink, NgClass],
 })
 export class NavFragmentsComponent {
-    protected service = inject(NavFragmentConfigService);
+    protected navFragmentService = inject(NavFragmentService);
     protected activatedRoute = inject(ActivatedRoute);
 
     protected activeRouteFragment = toSignal(this.activatedRoute.fragment, {initialValue: undefined});
