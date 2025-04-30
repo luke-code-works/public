@@ -1,12 +1,5 @@
 :host {
     @reference 'tailwindcss';
-    @apply grid grid-cols-1 grid-rows-[128px_64px_min-content];
 
-    .aurora {
-        background:
-            radial-gradient(at 5% 100%, color-mix(in oklab, #106ee8 40%, transparent) 0px, transparent 50%),
-            radial-gradient(at 45% 100%, color-mix(in oklab, #b03574 40%, transparent) 0px, transparent 50%),
-            radial-gradient(at 75% 41%, color-mix(in oklab, #0fc1a1 40%, transparent) 0px, transparent 50%),
-            radial-gradient(at 100% 100%, color-mix(in oklab, #02d395 40%, transparent) 0px, transparent 50%);
-    }
+    @apply grid grid-cols-1 grid-rows-[min-content];
 }
