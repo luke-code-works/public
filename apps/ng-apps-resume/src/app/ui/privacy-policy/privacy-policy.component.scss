@@ -1,6 +1,7 @@
 :host {
     @reference "tailwindcss";
 
+    @apply block;
     @apply bg-[var(--app-privacy-policy-bg-color)];
     @apply select-none text-justify break-words;
 }
