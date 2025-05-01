@@ -48,7 +48,7 @@
     }
 }
 
-.dark-mode {
+.dark-scheme {
     // TODO: Use or remove #0f1924 #002060;
     --root-bg-color: #0f002e;
 
@@ -67,15 +67,11 @@
 }
 
 @mixin color-scheme-styles {
-    :root {
+    .dark-scheme {
         color-scheme: dark;
     }
 
-    .dark-mode {
-        color-scheme: dark;
-    }
-
-    .light-mode {
+    .light-scheme {
         color-scheme: light;
     }
 }
