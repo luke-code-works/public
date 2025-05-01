@@ -12,8 +12,8 @@ import {NavFragmentService} from './nav-fragment.service';
     imports: [RouterLink, NgClass],
 })
 export class NavFragmentsComponent {
+    private activatedRoute = inject(ActivatedRoute);
     protected navFragmentService = inject(NavFragmentService);
-    protected activatedRoute = inject(ActivatedRoute);
 
     protected activeRouteFragment = toSignal(this.activatedRoute.fragment, {initialValue: undefined});
 }

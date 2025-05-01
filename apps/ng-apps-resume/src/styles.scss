@@ -41,23 +41,34 @@
 
 @mixin link-defaults {
     a {
-        @apply text-[#f08cf5];
+        @apply ease-in duration-200;
+        @apply text-[var(--app-link-color)];
+
         &:hover {
-            @apply text-[#f050f8];
+            @apply text-[var(--app-link-hover-color)];
+        }
+
+        &.active {
+            @apply text-[var(--app-link-active-color)] underline underline-offset-8;
         }
     }
 }
 
 .dark-scheme {
-    // TODO: Use or remove #0f1924 #002060;
+    --app-link-color: #c6d2ff; // indigo-200;
+    --app-link-hover-color: #fff;
+    --app-link-active-color: #fff;
+
+    // TODO: Use or remove #0f1924;
     --root-bg-color: #0f002e;
 
-    --app-header-title-text-color: #fff;
-    --app-nav-fragments-color: #fff;
-    --app-nav-fragments-hover-color: #f050f8;
-    --app-nav-fragments-active-color: #f050f8;
-
     --app-header-container-color: color-mix(in oklab, #19004a 65%, transparent);
+
+    --app-header-title-text-color: #c6d2ff; // 66baff
+
+    --app-nav-fragments-color: var(--app-link-color);
+    --app-nav-fragments-hover-color: var(--app-link-hover-color);
+    --app-nav-fragments-active-color: var(--app-link-active-color);
 
     --app-footer-container-bg-color: transparent;
     --app-footer-container-line-color: #4a00de; // almost indigo-700;
