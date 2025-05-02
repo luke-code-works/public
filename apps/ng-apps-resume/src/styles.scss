@@ -92,10 +92,15 @@
     @include meta.load-css('node_modules/material-symbols');
 }
 
-@include height-defaults();
-@include scrolling-defaults();
-@include heading-defaults();
-@include link-defaults();
-@include color-scheme-styles();
-@include material-theme-styles();
-@include material-symbols();
+@layer theme {
+    @include material-theme-styles();
+    @include material-symbols();
+}
+
+@layer base {
+    @include height-defaults();
+    @include scrolling-defaults();
+    @include heading-defaults();
+    @include link-defaults();
+    @include color-scheme-styles();
+}
