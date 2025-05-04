@@ -99,18 +99,44 @@
     }
 }
 
+@mixin open-sans-font() {
+    @font-face {
+        font-style: normal;
+        font-weight: 100 900;
+        src: url('/fonts/open-sans-variablefont.ttf') format('truetype');
+        font-family: 'Open Sans';
+        font-display: swap;
+    }
+
+    @font-face {
+        font-style: italic;
+        font-weight: 100 900;
+        src: url('/fonts/open-sans-italic-variablefont.ttf') format('truetype');
+        font-family: 'Open Sans';
+        font-display: swap;
+    }
+}
+
+@mixin font-defaults() {
+    body {
+        font-family: 'Open Sans', sans-serif;
+    }
+}
+
 @mixin material-symbols() {
     @include meta.load-css('node_modules/material-symbols');
 }
 
 @layer theme {
     @include material-theme-styles();
+    @include open-sans-font();
     @include material-symbols();
 }
 
 @layer base {
     @include height-defaults();
     @include scrolling-defaults();
+    @include font-defaults();
     @include heading-defaults();
     @include link-defaults();
     @include color-scheme-styles();
