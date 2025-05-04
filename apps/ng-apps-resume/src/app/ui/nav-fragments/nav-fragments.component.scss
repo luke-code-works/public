@@ -1,6 +1,5 @@
 :host {
     @reference "tailwindcss";
+
     @apply flex items-center gap-2;
-    @apply text-sm font-medium;
-    @apply text-[var(--app-nav-fragments-color)];
 }

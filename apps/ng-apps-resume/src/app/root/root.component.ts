@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {RouterLink, RouterOutlet} from '@angular/router';
+import {RouterLink, RouterLinkActive, RouterOutlet} from '@angular/router';
 import {FooterContainerComponent} from '../ui/footer-container/footer-container.component';
 import {HeaderContainerComponent} from '../ui/header-container/header-container.component';
 import {HeaderTitleComponent} from '../ui/header-title/header-title.component';
@@ -21,6 +21,7 @@ import {provideNavigation} from '../util/navigation/provider';
         FooterContainerComponent,
         XorCipherPipe,
         RouterLink,
+        RouterLinkActive,
     ],
 })
 export class RootComponent {}

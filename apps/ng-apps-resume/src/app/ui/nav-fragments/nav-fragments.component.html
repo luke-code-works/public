@@ -1,12 +1,10 @@
 @for (fragment of navFragmentService.fragments(); track $index) {
-    <div
-        class="rounded-lg px-3 py-2 hover:text-[var(--app-nav-fragments-hover-color)] ease-in duration-200 hover:cursor-pointer select-none"
-        [ngClass]="{'text-[var(--app-nav-fragments-active-color)]': activeRouteFragment() === fragment.id}"
-        [attr.aria-label]="fragment.label">
-        <a
-            [routerLink]="['/']"
-            [fragment]="fragment.id">
-            {{ fragment.label }}
-        </a>
-    </div>
+    <a
+        class="p-3 select-none text-sm text-[var(--app-nav-fragments-color)] hover:text-[var(--app-nav-fragments-hover-color)] [&.active]:text-[var(--app-nav-fragments-active-color)]"
+        [routerLink]="['/']"
+        [ngClass]="{'active': activeRouteFragment() === fragment.id}"
+        [attr.aria-label]="fragment.label"
+        [fragment]="fragment.id">
+        {{ fragment.label }}
+    </a>
 }

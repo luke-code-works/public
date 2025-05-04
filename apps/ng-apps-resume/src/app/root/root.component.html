@@ -17,8 +17,18 @@
     aria-label="footer"
     app-footer-container>
     <nav class="flex flex-row gap-6 w-full justify-center items-center mt-40">
-        <a [routerLink]="['/legal-notice']">Legal Notice</a>
-        <a [routerLink]="['/privacy-policy']">Privacy Policy</a>
+        <a
+            [routerLink]="['/legal-notice']"
+            [routerLinkActive]="['active']"
+            [attr.aria-label]="'Legal Notice'">
+            Legal Notice
+        </a>
+        <a
+            [routerLink]="['/privacy-policy']"
+            [routerLinkActive]="['active']"
+            [attr.aria-label]="'Privacy Policy'">
+            Privacy Policy
+        </a>
     </nav>
-    <div class="p-4 text-center text-white">© 2025. All Rights Reserved.<br /></div>
+    <div class="p-4 text-center">© 2025. All Rights Reserved.<br /></div>
 </footer>
