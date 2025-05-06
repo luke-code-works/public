@@ -41,15 +41,20 @@
 
 @mixin link-defaults {
     a {
-        @apply ease-in duration-200;
         @apply text-[var(--app-link-color)];
+        @apply underline underline-offset-8 decoration-transparent;
+
+        transition:
+            color 200ms ease-in,
+            text-decoration-color 200ms ease-in;
 
         &:hover {
             @apply text-[var(--app-link-hover-color)];
         }
 
         &.active {
-            @apply text-[var(--app-link-active-color)] underline underline-offset-8;
+            @apply text-[var(--app-link-active-color)];
+            text-decoration-color: var(--app-link-active-color);
         }
     }
 }
@@ -63,6 +68,7 @@
     --root-bg-color: #0f002e;
 
     --app-header-container-color: color-mix(in oklab, #19004a 65%, transparent);
+    --app-header-container-line-color: #4a00de; // almost indigo-700;
 
     --app-header-title-text-color: #c6d2ff; // 66baff
 
