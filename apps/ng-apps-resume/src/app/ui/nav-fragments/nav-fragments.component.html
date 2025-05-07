@@ -1,6 +1,6 @@
 @for (fragment of navFragmentService.fragments(); track $index) {
     <a
-        class="p-3 select-none text-sm text-[var(--app-nav-fragments-color)] hover:text-[var(--app-nav-fragments-hover-color)] [&.active]:text-[var(--app-nav-fragments-active-color)]"
+        class="p-3 select-none text-sm"
         [routerLink]="['/']"
         [ngClass]="{'active': activeRouteFragment() === fragment.id}"
         [attr.aria-label]="fragment.label"
