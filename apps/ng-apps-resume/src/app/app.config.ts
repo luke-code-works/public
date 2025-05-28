@@ -3,6 +3,7 @@ import {provideRouter, withInMemoryScrolling} from '@angular/router';
 import {appRoutes} from './app.routes';
 import {provideDefaultXorCipherDefaultKey} from './ui/xor-cipher/provider';
 import {provideMaterialSymbols} from './util/material-symbols/provider';
+import {provideI18nUsingTransloco} from './util/transloco/providers';
 
 export const appConfig: ApplicationConfig = {
     providers: [
@@ -23,5 +24,6 @@ export const appConfig: ApplicationConfig = {
                 return part1 + part2 + part3 + part4 + part5;
             })(),
         ),
+        provideI18nUsingTransloco(),
     ],
 };
