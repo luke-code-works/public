@@ -1,10 +1,12 @@
 <header
     aria-label="navigation"
     app-header-container>
-    <app-header-title [title]="'3f001b04010d331403161743050c1506' | xorCipher" />
+    <app-header-title
+        class="ml-20"
+        [title]="'120603001c4f010717' | xorCipher" />
     <div class="flex-grow"></div>
     <nav>
-        <app-nav-fragments />
+        <app-nav-fragments class="max-lg:!hidden mx-8" />
     </nav>
 </header>
 <main
