@@ -1,26 +1,27 @@
-<section>
+<section *transloco="let t; lang: 'de-DE'; prefix: 'legalNotice'">
     <div class="p-8 container mx-auto lg:max-w-screen-lg">
-        <h1 class="!mt-0">Impressum</h1>
-        <h2>Diensteanbieter</h2>
+        <h1 class="!mt-0">{{ t("title") }}</h1>
+        <h2>{{ t("provider.title") }}</h2>
         <ul class="list-outside list-disc pl-4">
             <li>
-                <app-text-obfuscation [text]="'3f001b04010d331403161743050c1506' | xorCipher" />
+                <app-text-obfuscation [text]="t('provider.name') | xorCipher" />
             </li>
             <li>
-                <app-text-obfuscation [text]="'3d1a020100440a125053474f' | xorCipher" />
+                <app-text-obfuscation [text]="t('provider.address.street') | xorCipher" />
             </li>
             <li>
-                <app-text-obfuscation [text]="'474249544a0d30831e0c015b081b1415' | xorCipher" />
+                <app-text-obfuscation [text]="t('provider.address.city') | xorCipher" />
             </li>
             <li>
-                Telefon:
-                <app-text-obfuscation [text]="'584149455a1d4d554150451e475b535615595353' | xorCipher" />
+                {{ t("provider.phone.label") }}:
+                <app-text-obfuscation [text]="t('provider.phone.value') | xorCipher" />
             </li>
             <li>
-                E-Mail:
-                <app-text-obfuscation [text]="'1f001b040103121a1c041c49270e0a0044014b040e40' | xorCipher" />
+                {{ t("provider.email.label") }}:
+                <app-text-obfuscation [text]="t('provider.email.value') | xorCipher" />
             </li>
         </ul>
+
         <!-- <h2>Social Media und andere Onlinepräsenzen</h2>
         <p>Dieses Impressum gilt auch für die folgenden Social-Media-Präsenzen und Onlineprofile:</p>
         <ul class="list-outside list-disc pl-4">
@@ -32,40 +33,29 @@
                 </a>
             </li>
         </ul> -->
-        <h2>Haftungs- und Schutzrechtshinweise</h2>
-        <h3>Haftungsausschluss</h3>
+
+        <h2>{{ t("legal.title") }}</h2>
+
+        <h3>{{ t("legal.disclaimer.title") }}</h3>
+        <p>{{ t("legal.disclaimer.text") }}</p>
+
+        <h3>{{ t("legal.externalLinks.title") }}</h3>
+        <p>{{ t("legal.externalLinks.text") }}</p>
+
+        <h3>{{ t("legal.copyright.title") }}</h3>
+        <p>{{ t("legal.copyright.text") }}</p>
+
+        <h3>{{ t("legal.violationNotice.title") }}</h3>
+        <p>{{ t("legal.violationNotice.text") }}</p>
+
         <p>
-            Die Inhalte dieses Onlineangebotes wurden sorgfältig und nach unserem aktuellen Kenntnisstand erstellt,
-            dienen jedoch nur der Information und entfalten keine rechtlich bindende Wirkung, sofern es sich nicht um
-            gesetzlich verpflichtende Informationen (z.B. das Impressum, die Datenschutzerklärung, AGB oder
-            verpflichtende Belehrungen von Verbrauchern) handelt. Wir behalten uns vor, die Inhalte vollständig oder
-            teilweise zu ändern oder zu löschen, soweit vertragliche Verpflichtungen unberührt bleiben. Alle Angebote
-        </p>
-        <h3>Links auf fremde Webseiten</h3>
-        <p>
-            Die Inhalte fremder Webseiten, auf die wir direkt oder indirekt verweisen, liegen außerhalb unseres
-            Verantwortungsbereiches und wir machen sie uns nicht zu Eigen. Für alle Inhalte und Nachteile, die aus der
-            Nutzung der in den verlinkten Webseiten aufrufbaren Informationen entstehen, übernehmen wir keine
-            Verantwortung.
-        </p>
-        <h3>Urheberrechte und Markenrechte</h3>
-        <p>
-            Alle auf dieser Website dargestellten Inhalte, wie Texte, Fotografien, Grafiken, Marken und Warenzeichen
-            sind durch die jeweiligen Schutzrechte (Urheberrechte, Markenrechte) geschützt. Die Verwendung,
-            Vervielfältigung usw. unterliegen unseren Rechten oder den Rechten der jeweiligen Urheber bzw.
-            Rechteinhaber.
-        </p>
-        <h3>Hinweise auf Rechtsverstöße</h3>
-        <p>
-            Sollten Sie innerhalb unseres Internetauftritts Rechtsverstöße bemerken, bitten wir Sie uns auf diese
-            hinzuweisen. Wir werden rechtswidrige Inhalte und Links nach Kenntnisnahme unverzüglich entfernen.
-            <br /><br />
+            <br />
             <a
                 href="https://datenschutz-generator.de/"
-                title="Rechtstext von Dr. Schwenke - für weitere Informationen bitte anklicken."
                 target="_blank"
                 rel="noopener noreferrer nofollow"
-                >Erstellt mit kostenlosem Datenschutz-Generator.de von Dr. Thomas Schwenke</a
+                [title]="t('generatorCredit.title')"
+                >{{ t("generatorCredit.text") }}</a
             >
         </p>
     </div>

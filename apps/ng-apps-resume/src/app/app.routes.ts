@@ -1,4 +1,7 @@
 import {Route} from '@angular/router';
+import {provideTranslocoScope} from '@jsverse/transloco';
+import {Locale} from '@jsverse/transloco-locale';
+import {createTranslocoInlineLoader} from './util/transloco/transloco-inline-loader-factory';
 
 export const appRoutes: Route[] = [
     {
@@ -9,6 +12,15 @@ export const appRoutes: Route[] = [
     {
         path: 'legal-notice',
         loadComponent: () => import('./ui/legal-notice/legal-notice.component').then((x) => x.LegalNoticeComponent),
+        providers: [
+            provideTranslocoScope({
+                scope: 'legalNotice',
+                loader: createTranslocoInlineLoader(
+                    (locale: Locale) => import(`../i18n/legal-notice/${locale}.json`),
+                    ['de-DE'],
+                ),
+            }),
+        ],
     },
     {
         path: '**',
