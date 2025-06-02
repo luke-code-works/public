@@ -1,0 +1,44 @@
+{
+    "cover": {
+        "greeting": "Hi, I'm",
+        "name": "Lukas",
+        "profession": "Software Developer",
+        "work": "Currently working for KEYElements GmbH",
+        "location": "Originally from and living in Tönisvorst, Germany",
+        "maritalStatus": "Happily married",
+        "hobbies": "Hobbies include swimming and firefighting"
+    },
+    "techStack": {
+        "title": "Tech Stack",
+        "item1": "Angular",
+        "item2": "PostgresSQL",
+        "item3": "GitLab CI/CD",
+        "item4": "Git",
+        "item5": "VS Code",
+        "item6": "TypeScript",
+        "item7": "JavaScript",
+        "item8": "NestJs",
+        "item9": "CSS",
+        "item10": "HTML",
+        "item11": "Sass",
+        "item12": "Node.js",
+        "item13": "TailwindCSS",
+        "item14": "Docker",
+        "item15": "Webpack",
+        "item16": ".NET Framework / Core C#",
+        "item17": ".NET Framework Visual Basic",
+        "item18": "Java"
+    },
+    "agileAndProject": {
+        "title": "Agile & Project",
+        "item1": "Kanban",
+        "item2": "Scrum",
+        "item3": "SAFe 5 Agilist"
+    },
+    "educationAndCareer": {
+        "title": "Education & Career",
+        "text1": "After completing my vocational diploma with a focus on electrical engineering, I studied business informatics.",
+        "text2": "My professional career began with the functional support of software for designing target architectures. Later, I worked as a developer and consultant, focussing on the development of applications for managing key figures and reports for large enterprises. During this time, I gained extensive experience, particularly with technologies such as TypeScript, Angular and NestJS. Additionally, I am a certified safety officer.",
+        "text3": "I have a strong interest in developing innovative und sustainable software solutions that strategically support businesses and create lasting value."
+    }
+}

@@ -1,5 +1,6 @@
 import {Component, DestroyRef, inject} from '@angular/core';
 import {MatIconModule} from '@angular/material/icon';
+import {TranslocoDirective} from '@jsverse/transloco';
 import {rxEffect} from 'ngxtension/rx-effect';
 import {of} from 'rxjs';
 import {useNavFragments$} from '../nav-fragments/nav-fragment.functions';
@@ -10,7 +11,7 @@ import {SparklingStarsParticleBackgroundComponent} from '../sparkling-stars-part
     selector: 'app-profile',
     templateUrl: './profile.component.html',
     styleUrl: './profile.component.scss',
-    imports: [MatIconModule, SparklingStarsParticleBackgroundComponent],
+    imports: [MatIconModule, TranslocoDirective, SparklingStarsParticleBackgroundComponent],
 })
 export class ProfileComponent {
     constructor() {

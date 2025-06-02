@@ -12,6 +12,15 @@ export const appRoutes: Route[] = [
     {
         path: 'profile',
         loadComponent: () => import('./ui/profile/profile.component').then((x) => x.ProfileComponent),
+        providers: [
+            provideTranslocoScope({
+                scope: 'profile',
+                loader: createTranslocoInlineLoader(
+                    (locale: Locale) => import(`../i18n/profile/${locale}.json`),
+                    ['en-US'],
+                ),
+            }),
+        ],
     },
     {
         path: 'privacy-policy',
