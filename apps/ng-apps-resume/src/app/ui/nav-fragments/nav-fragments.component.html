@@ -3,8 +3,8 @@
         class="p-3 select-none text-sm"
         [routerLink]="['/']"
         [ngClass]="{'active': activeRouteFragment() === fragment.id}"
-        [attr.aria-label]="fragment.label"
+        [attr.aria-label]="fragment.label()"
         [fragment]="fragment.id">
-        {{ fragment.label }}
+        {{ fragment.label() }}
     </a>
 }

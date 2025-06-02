@@ -1,10 +1,9 @@
-import {Component, DestroyRef, inject} from '@angular/core';
+import {Component} from '@angular/core';
 import {MatIconModule} from '@angular/material/icon';
-import {TranslocoDirective} from '@jsverse/transloco';
+import {translateSignal, TranslocoDirective} from '@jsverse/transloco';
 import {rxEffect} from 'ngxtension/rx-effect';
 import {of} from 'rxjs';
 import {useNavFragments$} from '../nav-fragments/nav-fragment.functions';
-import {NavFragmentService} from '../nav-fragments/nav-fragment.service';
 import {SparklingStarsParticleBackgroundComponent} from '../sparkling-stars-particle-background/sparkling-stars-particle-background.component';
 
 @Component({
@@ -14,13 +13,22 @@ import {SparklingStarsParticleBackgroundComponent} from '../sparkling-stars-part
     imports: [MatIconModule, TranslocoDirective, SparklingStarsParticleBackgroundComponent],
 })
 export class ProfileComponent {
+    private fragments = [
+        {
+            id: 'tech-stack',
+            label: translateSignal('fragments.techStack', {scope: 'profile', lang: 'en-US'}),
+        },
+        {
+            id: 'agile-and-project',
+            label: translateSignal('fragments.agileAndProject', {scope: 'profile', lang: 'en-US'}),
+        },
+        {
+            id: 'education-and-career',
+            label: translateSignal('fragments.educationAndCareer', {scope: 'profile', lang: 'en-US'}),
+        },
+    ];
+
     constructor() {
-        rxEffect(useNavFragments$(of(PROFILE_COMPONENT_FRAGMENTS), inject(NavFragmentService), inject(DestroyRef)));
+        rxEffect(useNavFragments$(of(this.fragments)));
     }
 }
-
-const PROFILE_COMPONENT_FRAGMENTS = [
-    {id: 'tech-stack', label: 'label.tech-stack'},
-    {id: 'agile-and-project', label: 'label.agile-and-project'},
-    {id: 'education-and-career', label: 'label.education-and-career'},
-];

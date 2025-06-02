@@ -1,4 +1,9 @@
 {
+    "fragments": {
+        "techStack": "Technology",
+        "agileAndProject": "Methods",
+        "educationAndCareer": "Career"
+    },
     "cover": {
         "greeting": "Hi, I'm",
         "name": "Lukas",
