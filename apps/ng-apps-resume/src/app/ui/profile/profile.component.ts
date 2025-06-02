@@ -3,39 +3,39 @@ import {MatIconModule} from '@angular/material/icon';
 import {provideTranslocoScope, translateSignal, TranslocoDirective} from '@jsverse/transloco';
 import {rxEffect} from 'ngxtension/rx-effect';
 import {of} from 'rxjs';
-import {Locale} from '../../util/transloco/locale';
+import {Locale, LOCALES} from '../../util/transloco/locale';
 import {createTranslocoInlineLoader} from '../../util/transloco/transloco-inline-loader-factory';
 import {useNavFragments$} from '../nav-fragments/nav-fragment.functions';
 import {SparklingStarsParticleBackgroundComponent} from '../sparkling-stars-particle-background/sparkling-stars-particle-background.component';
+
+const profileTranslocoScope = {
+    scope: 'profile',
+    loader: createTranslocoInlineLoader(
+        (locale: Locale) => import(`../../../i18n/profile/${locale}.json`),
+        [...LOCALES],
+    ),
+};
 
 @Component({
     selector: 'app-profile',
     templateUrl: './profile.component.html',
     styleUrl: './profile.component.scss',
     imports: [MatIconModule, TranslocoDirective, SparklingStarsParticleBackgroundComponent],
-    providers: [
-        provideTranslocoScope({
-            scope: 'profile',
-            loader: createTranslocoInlineLoader(
-                (locale: Locale) => import(`../../../i18n/profile/${locale}.json`),
-                ['en-US'],
-            ),
-        }),
-    ],
+    providers: [provideTranslocoScope(profileTranslocoScope)],
 })
 export class ProfileComponent {
     private fragments = [
         {
             id: 'tech-stack',
-            label: translateSignal('fragments.techStack', {scope: 'profile', lang: 'en-US'}),
+            label: translateSignal('fragments.tech-stack', {scope: profileTranslocoScope.scope}),
         },
         {
             id: 'agile-and-project',
-            label: translateSignal('fragments.agileAndProject', {scope: 'profile', lang: 'en-US'}),
+            label: translateSignal('fragments.agile-and-project', {scope: profileTranslocoScope.scope}),
         },
         {
             id: 'education-and-career',
-            label: translateSignal('fragments.educationAndCareer', {scope: 'profile', lang: 'en-US'}),
+            label: translateSignal('fragments.education-and-career', {scope: profileTranslocoScope.scope}),
         },
     ];
 

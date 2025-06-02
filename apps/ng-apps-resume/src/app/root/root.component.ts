@@ -11,6 +11,11 @@ import {provideNavigation} from '../util/navigation/provider';
 import {Locale, LOCALES} from '../util/transloco/locale';
 import {createTranslocoInlineLoader} from '../util/transloco/transloco-inline-loader-factory';
 
+const rootTranslocoScope = {
+    scope: 'root',
+    loader: createTranslocoInlineLoader((locale: Locale) => import(`../../i18n/root/${locale}.json`), [...LOCALES]),
+};
+
 @Component({
     selector: 'app-root,body[app-root]',
     templateUrl: './root.component.html',
@@ -26,17 +31,8 @@ import {createTranslocoInlineLoader} from '../util/transloco/transloco-inline-lo
         RouterLinkActive,
         TranslocoDirective,
     ],
-    providers: [
-        provideNavigation(withFragmentNavigation()),
-        provideTranslocoScope({
-            scope: 'root',
-            loader: createTranslocoInlineLoader(
-                (locale: Locale) => import(`../../i18n/root/${locale}.json`),
-                [...LOCALES],
-            ),
-        }),
-    ],
+    providers: [provideNavigation(withFragmentNavigation()), provideTranslocoScope(rootTranslocoScope)],
 })
 export class RootComponent {
-    private readonly year = new Date().getFullYear();
+    protected readonly year = new Date().getFullYear();
 }
