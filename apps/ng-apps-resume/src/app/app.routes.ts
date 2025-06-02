@@ -5,6 +5,24 @@ import {createTranslocoInlineLoader} from './util/transloco/transloco-inline-loa
 
 export const appRoutes: Route[] = [
     {
+        path: '',
+        pathMatch: 'full',
+        redirectTo: 'profile',
+    },
+    {
+        path: 'profile',
+        loadComponent: () => import('./ui/profile/profile.component').then((x) => x.ProfileComponent),
+        providers: [
+            provideTranslocoScope({
+                scope: 'profile',
+                loader: createTranslocoInlineLoader(
+                    (locale: Locale) => import(`../i18n/profile/${locale}.json`),
+                    ['en-US'],
+                ),
+            }),
+        ],
+    },
+    {
         path: 'privacy-policy',
         loadComponent: () =>
             import('./ui/privacy-policy/privacy-policy.component').then((x) => x.PrivacyPolicyComponent),
@@ -31,8 +49,9 @@ export const appRoutes: Route[] = [
             }),
         ],
     },
+
     {
         path: '**',
-        loadComponent: () => import('./ui/home/home.component').then((x) => x.HomeComponent),
+        redirectTo: 'profile',
     },
 ];
