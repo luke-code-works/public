@@ -24,6 +24,10 @@ export const appConfig: ApplicationConfig = {
                 return part1 + part2 + part3 + part4 + part5;
             })(),
         ),
-        provideI18nUsingTransloco(),
+        provideI18nUsingTransloco({
+            supportedLocales: ['en-US', 'de-DE'],
+            defaultLocale: 'en-US',
+            fallbackLocale: 'en-US',
+        }),
     ],
 };

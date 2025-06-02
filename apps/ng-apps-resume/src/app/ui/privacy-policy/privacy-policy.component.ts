@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import {TranslocoDirective} from '@jsverse/transloco';
 import {TextObfuscationComponent} from '../text-obfuscation/text-obfuscation.component';
 import {XorCipherPipe} from '../xor-cipher/xor-cipher.pipe';
 
@@ -6,6 +7,6 @@ import {XorCipherPipe} from '../xor-cipher/xor-cipher.pipe';
     selector: 'app-privacy-policy',
     templateUrl: './privacy-policy.component.html',
     styleUrl: './privacy-policy.component.scss',
-    imports: [XorCipherPipe, TextObfuscationComponent],
+    imports: [TranslocoDirective, XorCipherPipe, TextObfuscationComponent],
 })
 export class PrivacyPolicyComponent {}
