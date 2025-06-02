@@ -5,6 +5,15 @@ import {createTranslocoInlineLoader} from './util/transloco/transloco-inline-loa
 
 export const appRoutes: Route[] = [
     {
+        path: '',
+        pathMatch: 'full',
+        redirectTo: 'profile',
+    },
+    {
+        path: 'profile',
+        loadComponent: () => import('./ui/profile/profile.component').then((x) => x.ProfileComponent),
+    },
+    {
         path: 'privacy-policy',
         loadComponent: () =>
             import('./ui/privacy-policy/privacy-policy.component').then((x) => x.PrivacyPolicyComponent),
@@ -31,8 +40,9 @@ export const appRoutes: Route[] = [
             }),
         ],
     },
+
     {
         path: '**',
-        loadComponent: () => import('./ui/home/home.component').then((x) => x.HomeComponent),
+        redirectTo: 'profile',
     },
 ];
