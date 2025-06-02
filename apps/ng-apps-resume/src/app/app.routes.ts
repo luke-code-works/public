@@ -8,6 +8,15 @@ export const appRoutes: Route[] = [
         path: 'privacy-policy',
         loadComponent: () =>
             import('./ui/privacy-policy/privacy-policy.component').then((x) => x.PrivacyPolicyComponent),
+        providers: [
+            provideTranslocoScope({
+                scope: 'privacyPolicy',
+                loader: createTranslocoInlineLoader(
+                    (locale: Locale) => import(`../i18n/privacy-policy/${locale}.json`),
+                    ['de-DE'],
+                ),
+            }),
+        ],
     },
     {
         path: 'legal-notice',
