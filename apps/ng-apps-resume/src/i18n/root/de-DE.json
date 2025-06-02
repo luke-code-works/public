@@ -1,0 +1,9 @@
+{
+    "footer": {
+        "navigation": {
+            "legal-notice": "Impressum",
+            "privacy-policy": "Datenschutzerklärung"
+        },
+        "copyright": "© {{year}}. Alle Rechte vorbehalten."
+    }
+}

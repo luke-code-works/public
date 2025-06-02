@@ -15,6 +15,7 @@
     <router-outlet></router-outlet>
 </main>
 <footer
+    *transloco="let t; prefix: 'root'"
     class="text-sm select-none"
     aria-label="footer"
     app-footer-container>
@@ -22,15 +23,15 @@
         <a
             [routerLink]="['/legal-notice']"
             [routerLinkActive]="['active']"
-            [attr.aria-label]="'Legal Notice'">
-            Legal Notice
+            [attr.aria-label]="t('footer.navigation.legal-notice')">
+            {{ t("footer.navigation.legal-notice") }}
         </a>
         <a
             [routerLink]="['/privacy-policy']"
             [routerLinkActive]="['active']"
-            [attr.aria-label]="'Privacy Policy'">
-            Privacy Policy
+            [attr.aria-label]="t('footer.navigation.privacy-policy')">
+            {{ t("footer.navigation.privacy-policy") }}
         </a>
     </nav>
-    <div class="p-4 text-center">© 2025. All Rights Reserved.<br /></div>
+    <div class="p-4 text-center">{{ t("footer.copyright", {year: 2025}) }}<br /></div>
 </footer>
