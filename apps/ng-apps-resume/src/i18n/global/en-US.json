@@ -1,0 +1,24 @@
+{
+    "footer": {
+        "navigation": {
+            "legal-notice": "Legal Notice",
+            "privacy-policy": "Privacy Policy"
+        },
+        "social": {
+            "label": "Contact and social media",
+            "mail": {
+                "label": "Send an email",
+                "link": "1f001b040103121a1c041c49270e0a0044014b040e40"
+            },
+            "linkedin": {
+                "label": "Visit LinkedIn profile (opens in new tab)",
+                "link": "1b01041501174b5a071205030b00090a48090c094f4e0408561a1b5f09074605065d12135e140c0903481f02"
+            },
+            "github": {
+                "label": "Visit GitHub profile (opens in new tab)",
+                "link": "1b01041501174b5a170c0645120b490242004a0b14460e481a1c1115480542161e03"
+            }
+        },
+        "copyright": "Copyright © {{year}}. All Rights Reserved."
+    }
+}

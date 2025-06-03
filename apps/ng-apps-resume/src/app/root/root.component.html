@@ -15,11 +15,10 @@
     <router-outlet></router-outlet>
 </main>
 <footer
-    *transloco="let t; prefix: 'root'"
-    class="text-sm select-none"
+    *transloco="let t; prefix: 'global'"
     aria-label="footer"
     app-footer-container>
-    <nav class="flex flex-row gap-6 w-full justify-center items-center mt-48">
+    <nav class="flex justify-center gap-6 mt-24 lg:mt-36 text-sm select-none">
         <a
             [routerLink]="['/legal-notice']"
             [routerLinkActive]="['active']"
@@ -33,5 +32,22 @@
             {{ t("footer.navigation.privacy-policy") }}
         </a>
     </nav>
-    <div class="p-4 text-center">{{ t("footer.copyright", {year}) }}<br /></div>
+    <div
+        class="mt-6 lg:mt-8 flex justify-center gap-10"
+        role="group"
+        [attr.aria-label]="t('footer.social.label')">
+        <app-mail-icon-link
+            class="w-6 h-6"
+            [href]="'mailto:' + (t('footer.social.mail.link') | xorCipher)"
+            [label]="t('footer.social.mail.label')" />
+        <app-linkedin-icon-link
+            class="w-6 h-6"
+            [href]="t('footer.social.linkedin.link') | xorCipher"
+            [label]="t('footer.social.linkedin.label')" />
+        <app-github-icon-link
+            class="w-6 h-6"
+            [href]="t('footer.social.github.link') | xorCipher"
+            [label]="t('footer.social.github.label')" />
+    </div>
+    <app-footer-copyright class="mt-6 lg:mt-8 mb-10 lg:mb-14" />
 </footer>
