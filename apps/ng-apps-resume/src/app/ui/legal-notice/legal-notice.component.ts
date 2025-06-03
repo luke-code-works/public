@@ -5,19 +5,19 @@ import {createTranslocoInlineLoader} from '../../util/transloco/transloco-inline
 import {TextObfuscationComponent} from '../text-obfuscation/text-obfuscation.component';
 import {XorCipherPipe} from '../xor-cipher/xor-cipher.pipe';
 
+const legalNoticeTranslocoScope = {
+    scope: 'legal-notice',
+    loader: createTranslocoInlineLoader(
+        (locale: Locale) => import(`../../../i18n/legal-notice/${locale}.json`),
+        ['de-DE'],
+    ),
+};
+
 @Component({
     selector: 'app-legal-notice',
     templateUrl: './legal-notice.component.html',
     styleUrl: './legal-notice.component.scss',
     imports: [TranslocoDirective, XorCipherPipe, TextObfuscationComponent],
-    providers: [
-        provideTranslocoScope({
-            scope: 'legalNotice',
-            loader: createTranslocoInlineLoader(
-                (locale: Locale) => import(`../../../i18n/legal-notice/${locale}.json`),
-                ['de-DE'],
-            ),
-        }),
-    ],
+    providers: [provideTranslocoScope(legalNoticeTranslocoScope)],
 })
 export class LegalNoticeComponent {}

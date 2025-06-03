@@ -1,8 +1,8 @@
 {
     "fragments": {
-        "techStack": "Technology",
-        "agileAndProject": "Methods",
-        "educationAndCareer": "Career"
+        "tech-stack": "Technology",
+        "agile-and-project": "Methods",
+        "education-and-career": "Career"
     },
     "cover": {
         "greeting": "Hi, I'm",
@@ -10,10 +10,10 @@
         "profession": "Software Developer",
         "work": "Currently working for KEYElements GmbH",
         "location": "Originally from and living in Tönisvorst, Germany",
-        "maritalStatus": "Happily married",
+        "marital-status": "Happily married",
         "hobbies": "Hobbies include swimming and firefighting"
     },
-    "techStack": {
+    "tech-stack": {
         "title": "Tech Stack",
         "item1": "Angular",
         "item2": "PostgresSQL",
@@ -34,13 +34,13 @@
         "item17": ".NET Framework Visual Basic",
         "item18": "Java"
     },
-    "agileAndProject": {
+    "agile-and-project": {
         "title": "Agile & Project",
         "item1": "Kanban",
         "item2": "Scrum",
         "item3": "SAFe 5 Agilist"
     },
-    "educationAndCareer": {
+    "education-and-career": {
         "title": "Education & Career",
         "text1": "After completing my vocational diploma with a focus on electrical engineering, I studied business informatics.",
         "text2": "My professional career began with the functional support of software for designing target architectures. Later, I worked as a developer and consultant, focussing on the development of applications for managing key figures and reports for large enterprises. During this time, I gained extensive experience, particularly with technologies such as TypeScript, Angular and NestJS. Additionally, I am a certified safety officer.",

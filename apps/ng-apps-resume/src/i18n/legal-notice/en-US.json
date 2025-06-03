@@ -1,0 +1,42 @@
+{
+    "title": "Legal Notice",
+    "provider": {
+        "title": "Service Provider",
+        "name": "3f001b04010d331403161743050c1506",
+        "address": {
+            "street": "3d1a020100440a125053474f",
+            "city": "474249544a0d30831e0c015b081b1415"
+        },
+        "phone": {
+            "label": "Phone",
+            "value": "584149455a1d4d554150451e475b535615595353"
+        },
+        "email": {
+            "label": "Email",
+            "value": "1f001b040103121a1c041c49270e0a0044014b040e40"
+        }
+    },
+    "legal": {
+        "title": "Liability and Intellectual Property Notices",
+        "disclaimer": {
+            "title": "Disclaimer",
+            "text": "The contents of this online offering have been created carefully and to the best of our current knowledge. They are provided for information purposes only and do not create any legally binding obligations unless they are legally required disclosures (e.g. the legal notice, privacy policy, terms and conditions, or mandatory consumer information). We reserve the right to modify or delete the contents in full or in part, as long as contractual obligations remain unaffected. All offers are non-binding and without obligation."
+        },
+        "external-links": {
+            "title": "Links to External Websites",
+            "text": "The contents of external websites to which we refer directly or indirectly are outside our area of responsibility and we do not adopt them as our own. We accept no liability for any content or disadvantages arising from the use of information accessible through the linked websites."
+        },
+        "copyright": {
+            "title": "Copyrights and Trademark Rights",
+            "text": "All content displayed on this website, such as texts, photographs, graphics, trademarks, and trade names, are protected by the corresponding intellectual property rights (copyright, trademark rights). Use, reproduction, etc. are subject to our rights or the rights of the respective authors or rights holders."
+        },
+        "violation-notice": {
+            "title": "Notice of Legal Violations",
+            "text": "If you notice any legal violations on our website, please notify us. We will promptly remove any unlawful content or links upon becoming aware of them."
+        }
+    },
+    "generator-credit": {
+        "title": "Legal text by Dr. Schwenke – click for more information.",
+        "text": "Created with the free privacy policy generator by Dr. Thomas Schwenke"
+    }
+}
