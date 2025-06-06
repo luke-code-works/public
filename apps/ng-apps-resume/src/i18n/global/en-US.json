@@ -1,6 +1,7 @@
 {
     "footer": {
         "navigation": {
+            "label": "Policies and Information",
             "legal-notice": "Legal Notice",
             "privacy-policy": "Privacy Policy"
         },
