@@ -22,7 +22,7 @@
                         "input": "apps/ng-apps-resume/public"
                     }
                 ],
-                "styles": ["apps/ng-apps-resume/src/styles.scss"],
+                "styles": ["apps/ng-apps-resume/src/styles/main.scss"],
                 "scripts": []
             },
             "configurations": {
