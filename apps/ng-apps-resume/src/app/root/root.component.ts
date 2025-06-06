@@ -2,7 +2,7 @@ import {Component} from '@angular/core';
 import {RouterLink, RouterLinkActive, RouterOutlet} from '@angular/router';
 import {provideTranslocoScope, TranslocoDirective} from '@jsverse/transloco';
 import {FooterContainerComponent} from '../ui/footer-container/footer-container.component';
-import {FooterCopyrightComponent} from '../ui/footer-copyright/footer-copyright.component';
+import {CopyrightNoticeComponent} from '../ui/copyright-notice/copyright-notice.component';
 import {GitHubIconLinkComponent} from '../ui/github-icon-link/github-icon-link.component';
 import {HeaderContainerComponent} from '../ui/header-container/header-container.component';
 import {HeaderTitleComponent} from '../ui/header-title/header-title.component';
@@ -36,7 +36,7 @@ export const globalTranslocoScope = {
         RouterLink,
         RouterLinkActive,
         TranslocoDirective,
-        FooterCopyrightComponent,
+        CopyrightNoticeComponent,
         MailIconLinkComponent,
     ],
     providers: [provideNavigation(withFragmentNavigation()), provideTranslocoScope(globalTranslocoScope)],
