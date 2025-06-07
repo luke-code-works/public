@@ -2,18 +2,18 @@ import {NgClass} from '@angular/common';
 import {ChangeDetectionStrategy, Component, inject} from '@angular/core';
 import {toSignal} from '@angular/core/rxjs-interop';
 import {ActivatedRoute, RouterLink} from '@angular/router';
-import {NavFragmentService} from './nav-fragment.service';
+import {RouteFragmentNavigationService} from '../../util/route-fragment-navigation/route-fragment-navigation.service';
 
 @Component({
-    selector: 'app-nav-fragments',
-    templateUrl: './nav-fragments.component.html',
-    styleUrl: './nav-fragments.component.scss',
+    selector: 'app-route-fragment-links',
+    templateUrl: './route-fragment-links.component.html',
+    styleUrl: './route-fragment-links.component.scss',
     changeDetection: ChangeDetectionStrategy.OnPush,
     imports: [RouterLink, NgClass],
 })
-export class NavFragmentsComponent {
+export class RouteFragmentLinksComponent {
     private activatedRoute = inject(ActivatedRoute);
-    protected navFragmentService = inject(NavFragmentService);
+    protected routeFragmentNavigationService = inject(RouteFragmentNavigationService);
 
     protected activeRouteFragment = toSignal(this.activatedRoute.fragment, {initialValue: undefined});
 }

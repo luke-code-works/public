@@ -1,12 +1,12 @@
 <header
     aria-label="navigation"
     app-header-container>
-    <app-header-title
+    <app-logo-title
         class="ml-20"
         [title]="'120603001c4f010717' | xorCipher" />
     <div class="flex-grow"></div>
     <nav>
-        <app-nav-fragments class="max-lg:!hidden mx-8" />
+        <app-route-fragment-links class="max-lg:!hidden mx-8" />
     </nav>
 </header>
 <main
@@ -50,5 +50,5 @@
             [href]="t('footer.social.github.link') | xorCipher"
             [label]="t('footer.social.github.label')" />
     </div>
-    <app-footer-copyright class="mt-6 lg:mt-8 mb-10 lg:mb-14" />
+    <app-copyright-notice class="mt-6 lg:mt-8 mb-10 lg:mb-14" />
 </footer>
