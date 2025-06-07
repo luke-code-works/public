@@ -5,8 +5,8 @@ import {CopyrightNoticeComponent} from '../ui/copyright-notice/copyright-notice.
 import {FooterContainerComponent} from '../ui/footer-container/footer-container.component';
 import {GitHubIconLinkComponent} from '../ui/github-icon-link/github-icon-link.component';
 import {HeaderContainerComponent} from '../ui/header-container/header-container.component';
-import {HeaderTitleComponent} from '../ui/header-title/header-title.component';
 import {LinkedinIconLinkComponent} from '../ui/linkedin-icon-link/linkedin-icon-link.component';
+import {LogoTitleComponent} from '../ui/logo-title/logo-title.component';
 import {MailIconLinkComponent} from '../ui/mail-icon-link/mail-icon-link.component';
 import {RouteFragmentLinksComponent} from '../ui/route-fragment-links/route-fragment-links.component';
 import {XorCipherPipe} from '../ui/xor-cipher/xor-cipher.pipe';
@@ -26,7 +26,7 @@ export const globalTranslocoScope = {
     styleUrl: './root.component.scss',
     imports: [
         HeaderContainerComponent,
-        HeaderTitleComponent,
+        LogoTitleComponent,
         RouteFragmentLinksComponent,
         RouterOutlet,
         FooterContainerComponent,

@@ -3,13 +3,13 @@ import {Router} from '@angular/router';
 import {ScrambledTextDirective} from '../scrambled-text/scrambled-text.directive';
 
 @Component({
-    selector: 'app-header-title',
-    templateUrl: './header-title.component.html',
-    styleUrl: './header-title.component.scss',
+    selector: 'app-logo-title',
+    templateUrl: './logo-title.component.html',
+    styleUrl: './logo-title.component.scss',
     imports: [ScrambledTextDirective],
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class HeaderTitleComponent {
+export class LogoTitleComponent {
     private router = inject(Router);
 
     title = input.required<string>();
