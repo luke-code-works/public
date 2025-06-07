@@ -3,9 +3,9 @@ import {MatIconModule} from '@angular/material/icon';
 import {provideTranslocoScope, translateSignal, TranslocoDirective} from '@jsverse/transloco';
 import {rxEffect} from 'ngxtension/rx-effect';
 import {of} from 'rxjs';
+import {useRouteFragments$} from '../../util/route-fragment-navigation/route-fragment.functions';
 import {Locale, LOCALES} from '../../util/transloco/locale';
 import {createTranslocoInlineLoader} from '../../util/transloco/transloco-inline-loader-factory';
-import {useNavFragments$} from '../nav-fragments/nav-fragment.functions';
 import {SparklingStarsParticleBackgroundComponent} from '../sparkling-stars-particle-background/sparkling-stars-particle-background.component';
 
 const profileTranslocoScope = {
@@ -24,7 +24,7 @@ const profileTranslocoScope = {
     providers: [provideTranslocoScope(profileTranslocoScope)],
 })
 export class ProfileComponent {
-    private fragments = [
+    private routeFragments = [
         {
             id: 'tech-stack',
             label: translateSignal('fragments.tech-stack', {scope: profileTranslocoScope.scope}),
@@ -40,6 +40,6 @@ export class ProfileComponent {
     ];
 
     constructor() {
-        rxEffect(useNavFragments$(of(this.fragments)));
+        rxEffect(useRouteFragments$(of(this.routeFragments)));
     }
 }
