@@ -7,6 +7,6 @@ import {ChangeDetectionStrategy, Component, input} from '@angular/core';
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class GitHubIconLinkComponent {
-    href = input.required<string>();
-    label = input<string>('GitHub');
+    readonly href = input.required<string>();
+    readonly label = input<string>('GitHub');
 }

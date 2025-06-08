@@ -1,4 +1,3 @@
-import {NgClass} from '@angular/common';
 import {ChangeDetectionStrategy, Component, inject} from '@angular/core';
 import {toSignal} from '@angular/core/rxjs-interop';
 import {ActivatedRoute, RouterLink} from '@angular/router';
@@ -9,11 +8,11 @@ import {RouteFragmentNavigationService} from '../../util/route-fragment-navigati
     templateUrl: './route-fragment-links.component.html',
     styleUrl: './route-fragment-links.component.scss',
     changeDetection: ChangeDetectionStrategy.OnPush,
-    imports: [RouterLink, NgClass],
+    imports: [RouterLink],
 })
 export class RouteFragmentLinksComponent {
-    private activatedRoute = inject(ActivatedRoute);
-    protected routeFragmentNavigationService = inject(RouteFragmentNavigationService);
+    private readonly activatedRoute = inject(ActivatedRoute);
+    protected readonly routeFragmentNavigationService = inject(RouteFragmentNavigationService);
 
-    protected activeRouteFragment = toSignal(this.activatedRoute.fragment, {initialValue: undefined});
+    protected readonly activeRouteFragment = toSignal(this.activatedRoute.fragment, {initialValue: undefined});
 }
