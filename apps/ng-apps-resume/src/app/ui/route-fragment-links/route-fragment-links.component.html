@@ -2,7 +2,7 @@
     <a
         class="p-3 select-none text-sm"
         [routerLink]="['/']"
-        [ngClass]="{'active': activeRouteFragment() === routeFragment.id}"
+        [class.active]="activeRouteFragment() === routeFragment.id"
         [attr.aria-label]="routeFragment.label()"
         [fragment]="routeFragment.id">
         {{ routeFragment.label() }}
