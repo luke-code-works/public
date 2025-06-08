@@ -10,11 +10,11 @@ import {ScrambledTextDirective} from '../scrambled-text/scrambled-text.directive
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class LogoTitleComponent {
-    private router = inject(Router);
+    private readonly router = inject(Router);
 
-    title = input.required<string>();
+    readonly title = input.required<string>();
 
-    private scrambledTextDirective = viewChild(ScrambledTextDirective);
+    private readonly scrambledTextDirective = viewChild(ScrambledTextDirective);
 
     @HostListener('click')
     protected click() {

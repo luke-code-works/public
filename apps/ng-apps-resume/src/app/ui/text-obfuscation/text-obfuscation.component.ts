@@ -6,9 +6,9 @@ import {ChangeDetectionStrategy, Component, effect, input, signal} from '@angula
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class TextObfuscationComponent {
-    text = input.required<string>();
+    readonly text = input.required<string>();
 
-    protected segments = signal<ObfuscatedTextSegments>([]);
+    protected readonly segments = signal<ObfuscatedTextSegments>([]);
 
     constructor() {
         effect(() => {

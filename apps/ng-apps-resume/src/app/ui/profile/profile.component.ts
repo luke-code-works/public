@@ -24,7 +24,7 @@ const profileTranslocoScope = {
     providers: [provideTranslocoScope(profileTranslocoScope)],
 })
 export class ProfileComponent {
-    private routeFragments = [
+    private readonly routeFragments = [
         {
             id: 'tech-stack',
             label: translateSignal('fragments.tech-stack', {scope: profileTranslocoScope.scope}),

@@ -9,10 +9,10 @@ import {loadStarsPreset} from '@tsparticles/preset-stars';
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SparklingStarsParticleBackgroundComponent implements OnInit {
-    private elementRef = inject(ElementRef);
+    private readonly elementRef = inject(ElementRef);
 
-    id = input.required<string>();
-    animated = input(false);
+    readonly id = input.required<string>();
+    readonly animated = input(false);
 
     ngOnInit() {
         this.initParticles();

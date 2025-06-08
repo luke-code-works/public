@@ -11,8 +11,8 @@ import {RouteFragmentNavigationService} from '../../util/route-fragment-navigati
     imports: [RouterLink],
 })
 export class RouteFragmentLinksComponent {
-    private activatedRoute = inject(ActivatedRoute);
-    protected routeFragmentNavigationService = inject(RouteFragmentNavigationService);
+    private readonly activatedRoute = inject(ActivatedRoute);
+    protected readonly routeFragmentNavigationService = inject(RouteFragmentNavigationService);
 
-    protected activeRouteFragment = toSignal(this.activatedRoute.fragment, {initialValue: undefined});
+    protected readonly activeRouteFragment = toSignal(this.activatedRoute.fragment, {initialValue: undefined});
 }

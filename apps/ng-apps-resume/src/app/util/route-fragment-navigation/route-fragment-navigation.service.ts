@@ -2,8 +2,8 @@ import {signal} from '@angular/core';
 import {RouteFragment} from './route-fragment.type';
 
 export class RouteFragmentNavigationService {
-    private _routeFragments = signal<RouteFragment[]>([]);
-    routeFragments = this._routeFragments.asReadonly();
+    private readonly _routeFragments = signal<RouteFragment[]>([]);
+    readonly routeFragments = this._routeFragments.asReadonly();
 
     setRouteFragments(routeFragments: RouteFragment[]) {
         this._routeFragments.set(routeFragments);
