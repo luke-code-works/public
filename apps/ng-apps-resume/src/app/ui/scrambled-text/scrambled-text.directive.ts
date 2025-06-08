@@ -8,9 +8,9 @@ import * as scrambled from 'scrambled-text';
     exportAs: 'appScrambledText',
 })
 export class ScrambledTextDirective {
-    text = input.required<string>();
+    readonly text = input.required<string>();
 
-    scrambledText = signal<string | undefined>(undefined);
+    readonly scrambledText = signal<string | undefined>(undefined);
 
     constructor() {
         toObservable(this.text)

@@ -6,7 +6,7 @@ import {XOR_CIPHER_DEFAULT_KEY} from './provider';
     name: 'xorCipher',
 })
 export class XorCipherPipe implements PipeTransform {
-    private defaultKey = inject(XOR_CIPHER_DEFAULT_KEY);
+    private readonly defaultKey = inject(XOR_CIPHER_DEFAULT_KEY);
 
     transform(data: string, options?: XorCipherPipeOptions): string {
         options ??= {};
