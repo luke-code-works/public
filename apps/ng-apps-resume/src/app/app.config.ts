@@ -1,9 +1,9 @@
 import {ApplicationConfig, provideZoneChangeDetection} from '@angular/core';
 import {provideRouter, withInMemoryScrolling} from '@angular/router';
 import {appRoutes} from './app.routes';
-import {provideDefaultXorCipherDefaultKey} from './ui/xor-cipher/provider';
 import {provideMaterialSymbols} from './util/material-symbols/provider';
 import {provideI18nUsingTransloco} from './util/transloco/providers';
+import {provideDefaultXorCipherDefaultKey} from './util/xor-cipher/provider';
 
 export const appConfig: ApplicationConfig = {
     providers: [

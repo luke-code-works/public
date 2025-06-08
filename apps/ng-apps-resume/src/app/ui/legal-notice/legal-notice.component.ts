@@ -2,8 +2,8 @@ import {Component} from '@angular/core';
 import {provideTranslocoScope, TranslocoDirective} from '@jsverse/transloco';
 import {Locale} from '../../util/transloco/locale';
 import {createTranslocoInlineLoader} from '../../util/transloco/transloco-inline-loader-factory';
+import {XorCipherPipe} from '../../util/xor-cipher/xor-cipher.pipe';
 import {TextObfuscationComponent} from '../text-obfuscation/text-obfuscation.component';
-import {XorCipherPipe} from '../xor-cipher/xor-cipher.pipe';
 
 const legalNoticeTranslocoScope = {
     scope: 'legal-notice',

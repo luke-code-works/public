@@ -3,8 +3,8 @@ import {provideTranslocoScope, TranslocoDirective} from '@jsverse/transloco';
 import {Locale} from '@jsverse/transloco-locale';
 import {LOCALES} from '../../util/transloco/locale';
 import {createTranslocoInlineLoader} from '../../util/transloco/transloco-inline-loader-factory';
+import {XorCipherPipe} from '../../util/xor-cipher/xor-cipher.pipe';
 import {TextObfuscationComponent} from '../text-obfuscation/text-obfuscation.component';
-import {XorCipherPipe} from '../xor-cipher/xor-cipher.pipe';
 
 const privacyPolicyTranslocoScope = {
     scope: 'privacy-policy',

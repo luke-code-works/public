@@ -9,11 +9,11 @@ import {LinkedinIconLinkComponent} from '../ui/linkedin-icon-link/linkedin-icon-
 import {LogoTitleComponent} from '../ui/logo-title/logo-title.component';
 import {MailIconLinkComponent} from '../ui/mail-icon-link/mail-icon-link.component';
 import {RouteFragmentLinksComponent} from '../ui/route-fragment-links/route-fragment-links.component';
-import {XorCipherPipe} from '../ui/xor-cipher/xor-cipher.pipe';
 import {provideNavigation} from '../util/navigation/provider';
 import {withRouteFragmentNavigation} from '../util/route-fragment-navigation/provider';
 import {Locale, LOCALES} from '../util/transloco/locale';
 import {createTranslocoInlineLoader} from '../util/transloco/transloco-inline-loader-factory';
+import {XorCipherPipe} from '../util/xor-cipher/xor-cipher.pipe';
 
 export const globalTranslocoScope = {
     scope: 'global',
