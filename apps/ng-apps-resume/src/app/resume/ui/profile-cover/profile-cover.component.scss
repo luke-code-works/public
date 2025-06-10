@@ -1,4 +1,4 @@
 :host {
     @reference "tailwindcss";
-    @apply h-[calc(100vh-64px)] grid grid-cols-1 grid-rows-1;
+    @apply min-h-[calc(100vh-64px)] grid grid-cols-1 grid-rows-1;
 }
