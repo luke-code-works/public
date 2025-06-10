@@ -1,6 +1,6 @@
 import {ChangeDetectionStrategy, Component, HostListener, inject, input, viewChild} from '@angular/core';
 import {Router} from '@angular/router';
-import {ScrambledTextDirective} from '../scrambled-text/scrambled-text.directive';
+import {ScrambledTextDirective} from '../../util/scrambled-text/scrambled-text.directive';
 
 @Component({
     selector: 'app-logo-title',

@@ -8,16 +8,17 @@ export const appRoutes: Route[] = [
     },
     {
         path: 'profile',
-        loadComponent: () => import('./ui/profile/profile.component').then((x) => x.ProfileComponent),
+        loadComponent: () => import('./resume/feature/profile/profile.component').then((x) => x.ProfileComponent),
     },
     {
         path: 'privacy-policy',
         loadComponent: () =>
-            import('./ui/privacy-policy/privacy-policy.component').then((x) => x.PrivacyPolicyComponent),
+            import('./legal/feature/privacy-policy/privacy-policy.component').then((x) => x.PrivacyPolicyComponent),
     },
     {
         path: 'legal-notice',
-        loadComponent: () => import('./ui/legal-notice/legal-notice.component').then((x) => x.LegalNoticeComponent),
+        loadComponent: () =>
+            import('./legal/feature/legal-notice/legal-notice.component').then((x) => x.LegalNoticeComponent),
     },
 
     {

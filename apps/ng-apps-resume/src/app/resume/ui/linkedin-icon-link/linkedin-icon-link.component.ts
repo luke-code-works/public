@@ -1,7 +1,7 @@
 import {ChangeDetectionStrategy, Component, input} from '@angular/core';
 
 @Component({
-    selector: 'app-linkedin-icon-link',
+    selector: 'app-resume-linkedin-icon-link',
     templateUrl: './linkedin-icon-link.component.html',
     styleUrl: './linkedin-icon-link.component.scss',
     changeDetection: ChangeDetectionStrategy.OnPush,
