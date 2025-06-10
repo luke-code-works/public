@@ -3,17 +3,13 @@ import {MatIconModule} from '@angular/material/icon';
 import {provideTranslocoScope, translateSignal, TranslocoDirective} from '@jsverse/transloco';
 import {rxEffect} from 'ngxtension/rx-effect';
 import {of} from 'rxjs';
-import {SparklingStarsParticleBackgroundComponent} from '../../../shared/ui/sparkling-stars-particle-background/sparkling-stars-particle-background.component';
-import {useRouteFragments$} from '../../../shared/util/route-fragment-navigation/route-fragment.functions';
-import {Locale, LOCALES} from '../../../shared/util/transloco/locale';
-import {createTranslocoInlineLoader} from '../../../shared/util/transloco/transloco-inline-loader-factory';
+import {SparklingStarsParticleBackgroundComponent} from '../../shared/ui/sparkling-stars-particle-background/sparkling-stars-particle-background.component';
+import {useRouteFragments$} from '../../shared/util/route-fragment-navigation/route-fragment.functions';
+import {createTranslocoInlineLoader} from '../../shared/util/transloco/transloco-inline-loader-factory';
 
 const profileTranslocoScope = {
     scope: 'profile',
-    loader: createTranslocoInlineLoader(
-        (locale: Locale) => import(`../../../../i18n/profile/${locale}.json`),
-        [...LOCALES],
-    ),
+    loader: createTranslocoInlineLoader((locale: string) => import(`./i18n/${locale}.json`), ['en-US', 'de-DE']),
 };
 
 @Component({
