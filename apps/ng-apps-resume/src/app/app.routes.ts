@@ -8,7 +8,7 @@ export const appRoutes: Route[] = [
     },
     {
         path: 'profile',
-        loadComponent: () => import('./resume/feature/profile/profile.component').then((x) => x.ProfileComponent),
+        loadComponent: () => import('./resume/feature-profile/profile.component').then((x) => x.ProfileComponent),
     },
     {
         path: 'privacy-policy',
