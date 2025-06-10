@@ -1,9 +1,9 @@
 import {ChangeDetectionStrategy, Component} from '@angular/core';
 import {provideTranslocoScope, TranslocoDirective} from '@jsverse/transloco';
-import {globalTranslocoScope} from '../../root/root.component';
+import {globalTranslocoScope} from '../../../root/root.component';
 
 @Component({
-    selector: 'app-copyright-notice',
+    selector: 'app-legal-copyright-notice',
     templateUrl: './copyright-notice.component.html',
     styleUrl: './copyright-notice.component.scss',
     changeDetection: ChangeDetectionStrategy.OnPush,
