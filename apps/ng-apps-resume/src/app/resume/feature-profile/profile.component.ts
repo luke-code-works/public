@@ -3,9 +3,9 @@ import {MatIconModule} from '@angular/material/icon';
 import {provideTranslocoScope, translateSignal, TranslocoDirective} from '@jsverse/transloco';
 import {rxEffect} from 'ngxtension/rx-effect';
 import {of} from 'rxjs';
-import {SparklingStarsParticleBackgroundComponent} from '../../shared/ui/sparkling-stars-particle-background/sparkling-stars-particle-background.component';
 import {useRouteFragments$} from '../../shared/util/route-fragment-navigation/route-fragment.functions';
 import {createTranslocoInlineLoader} from '../../shared/util/transloco/transloco-inline-loader-factory';
+import {ProfileCoverComponent} from '../ui/profile-cover/profile-cover.component';
 
 const profileTranslocoScope = {
     scope: 'profile',
@@ -16,7 +16,7 @@ const profileTranslocoScope = {
     selector: 'app-resume-profile',
     templateUrl: './profile.component.html',
     styleUrl: './profile.component.scss',
-    imports: [MatIconModule, TranslocoDirective, SparklingStarsParticleBackgroundComponent],
+    imports: [MatIconModule, TranslocoDirective, ProfileCoverComponent],
     providers: [provideTranslocoScope(profileTranslocoScope)],
 })
 export class ProfileComponent {
