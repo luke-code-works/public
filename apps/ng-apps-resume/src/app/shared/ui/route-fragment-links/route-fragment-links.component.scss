@@ -3,8 +3,8 @@
 
     @apply flex items-center gap-2;
 
-    // Overriding default link styles for this component
-    --app-link-color: var(--app-route-fragment-links-color);
-    --app-link-hover-color: var(--app-route-fragment-links-hover-color);
-    --app-link-active-color: var(--app-route-fragment-links-active-color);
+    // Overriding link styles for this component
+    --link-color: var(--app-route-fragment-links-color);
+    --link-hover-color: var(--app-route-fragment-links-hover-color);
+    --link-active-color: var(--app-route-fragment-links-active-color);
 }
