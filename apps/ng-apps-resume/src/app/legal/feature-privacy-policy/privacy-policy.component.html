@@ -1,163 +1,221 @@
-<section *transloco="let t; prefix: 'privacyPolicy'">
-    <div class="p-8 container mx-auto lg:max-w-screen-lg">
-        <h1 class="!mt-0">{{ t("title") }}</h1>
+<article
+    *transloco="let t; prefix: 'privacyPolicy'"
+    class="p-8 container mx-auto lg:max-w-screen-lg">
+    <h1 app-heading-with-dot>{{ t("title") }}</h1>
 
-        <h2>{{ t("overview.title") }}</h2>
+    <section>
+        <h2 app-heading-with-dot>{{ t("overview.title") }}</h2>
 
-        <h3>{{ t("overview.general.title") }}</h3>
-        <p>{{ t("overview.general.text") }}</p>
+        <div>
+            <h3 app-heading-with-dot>{{ t("overview.general.title") }}</h3>
+            <p>{{ t("overview.general.text") }}</p>
+        </div>
 
-        <h3>{{ t("overview.collection.title") }}</h3>
+        <div>
+            <h3 app-heading-with-dot>{{ t("overview.collection.title") }}</h3>
 
-        <h4>{{ t("overview.collection.responsible.title") }}</h4>
-        <p>{{ t("overview.collection.responsible.text") }}</p>
+            <div>
+                <h4 app-heading-with-dot>{{ t("overview.collection.responsible.title") }}</h4>
+                <p>{{ t("overview.collection.responsible.text") }}</p>
+            </div>
 
-        <h4>{{ t("overview.collection.methods.title") }}</h4>
-        <p>{{ t("overview.collection.methods.text") }}</p>
+            <div>
+                <h4 app-heading-with-dot>{{ t("overview.collection.methods.title") }}</h4>
+                <p>{{ t("overview.collection.methods.text") }}</p>
+            </div>
 
-        <h4>{{ t("overview.collection.usage.title") }}</h4>
-        <p>{{ t("overview.collection.usage.text") }}</p>
+            <div>
+                <h4 app-heading-with-dot>{{ t("overview.collection.usage.title") }}</h4>
+                <p>{{ t("overview.collection.usage.text") }}</p>
+            </div>
 
-        <h4>{{ t("overview.collection.rights.title") }}</h4>
-        <p>{{ t("overview.collection.rights.text") }}</p>
+            <div>
+                <h4 app-heading-with-dot>{{ t("overview.collection.rights.title") }}</h4>
+                <p>{{ t("overview.collection.rights.text") }}</p>
+            </div>
+        </div>
+    </section>
 
-        <h2>{{ t("hosting.title") }}</h2>
+    <section>
+        <h2 app-heading-with-dot>{{ t("hosting.title") }}</h2>
         <p>{{ t("hosting.intro") }}</p>
 
-        <h3>{{ t("hosting.external.title") }}</h3>
-        <p>{{ t("hosting.external.text") }}</p>
-        <p>
-            <br />
-            {{ t("hosting.hosts.title") }}
-        </p>
-        <ul class="list-outside list-disc pl-4">
-            <li>{{ t("hosting.hosts.text") }}</li>
-        </ul>
+        <div>
+            <h3 app-heading-with-dot>{{ t("hosting.external.title") }}</h3>
+            <p>{{ t("hosting.external.text") }}</p>
+            <p>
+                {{ t("hosting.hosts.title") }}
+            </p>
+            <ul class="list-outside list-disc pl-4">
+                <li>{{ t("hosting.hosts.text") }}</li>
+            </ul>
+        </div>
+    </section>
 
-        <h2>{{ t("legal.title") }}</h2>
+    <section>
+        <h2 app-heading-with-dot>{{ t("legal.title") }}</h2>
 
-        <h3>{{ t("legal.privacy.title") }}</h3>
-        <p>
-            {{ t("legal.privacy.text1") }}
-            <br />
-            {{ t("legal.privacy.text2") }}
-        </p>
+        <div>
+            <h3 app-heading-with-dot>{{ t("legal.privacy.title") }}</h3>
+            <p>
+                {{ t("legal.privacy.text1") }}
+            </p>
+            <p>
+                {{ t("legal.privacy.text2") }}
+            </p>
+        </div>
 
-        <h3>{{ t("legal.responsible.title") }}</h3>
-        <p>{{ t("legal.responsible.text1") }}</p>
-        <ul class="list-outside list-disc pl-4">
-            <li>
-                <app-text-obfuscation [text]="t('legal.responsible.name') | xorCipher" />
-            </li>
-            <li>
-                <app-text-obfuscation [text]="t('legal.responsible.address.street') | xorCipher" />
-            </li>
-            <li>
-                <app-text-obfuscation [text]="t('legal.responsible.address.city') | xorCipher" />
-            </li>
-            <li>
-                {{ t("legal.responsible.phone.label") }}:
-                <app-text-obfuscation [text]="t('legal.responsible.phone.value') | xorCipher" />
-            </li>
-            <li>
-                {{ t("legal.responsible.email.label") }}:
-                <app-text-obfuscation [text]="t('legal.responsible.email.value') | xorCipher" />
-            </li>
-        </ul>
-        <p>{{ t("legal.responsible.text2") }}</p>
+        <div>
+            <h3 app-heading-with-dot>{{ t("legal.responsible.title") }}</h3>
+            <p>{{ t("legal.responsible.text1") }}</p>
+            <ul class="list-outside list-disc pl-4">
+                <li>
+                    <app-text-obfuscation [text]="t('legal.responsible.name') | xorCipher" />
+                </li>
+                <li>
+                    <app-text-obfuscation [text]="t('legal.responsible.address.street') | xorCipher" />
+                </li>
+                <li>
+                    <app-text-obfuscation [text]="t('legal.responsible.address.city') | xorCipher" />
+                </li>
+                <li>
+                    {{ t("legal.responsible.phone.label") }}:
+                    <app-text-obfuscation [text]="t('legal.responsible.phone.value') | xorCipher" />
+                </li>
+                <li>
+                    {{ t("legal.responsible.email.label") }}:
+                    <app-text-obfuscation [text]="t('legal.responsible.email.value') | xorCipher" />
+                </li>
+            </ul>
+            <p>{{ t("legal.responsible.text2") }}</p>
+        </div>
 
-        <h3>{{ t("legal.data-retention.title") }}</h3>
-        <p>{{ t("legal.data-retention.text") }}</p>
+        <div>
+            <h3 app-heading-with-dot>{{ t("legal.data-retention.title") }}</h3>
+            <p>{{ t("legal.data-retention.text") }}</p>
+        </div>
 
-        <h3>{{ t("legal.legal-grounds.title") }}</h3>
-        <p>{{ t("legal.legal-grounds.text") }}</p>
+        <div>
+            <h3 app-heading-with-dot>{{ t("legal.legal-grounds.title") }}</h3>
+            <p>{{ t("legal.legal-grounds.text") }}</p>
+        </div>
 
-        <h3>{{ t("legal.data-recipients.title") }}</h3>
-        <p>{{ t("legal.data-recipients.text") }}</p>
+        <div>
+            <h3 app-heading-with-dot>{{ t("legal.data-recipients.title") }}</h3>
+            <p>{{ t("legal.data-recipients.text") }}</p>
+        </div>
 
-        <h3>{{ t("legal.withdraw-consent.title") }}</h3>
-        <p>{{ t("legal.withdraw-consent.text") }}</p>
+        <div>
+            <h3 app-heading-with-dot>{{ t("legal.withdraw-consent.title") }}</h3>
+            <p>{{ t("legal.withdraw-consent.text") }}</p>
+        </div>
 
-        <h3>{{ t("legal.right-to-object.title") }}</h3>
-        <p>{{ t("legal.right-to-object.text1") }}</p>
-        <p>{{ t("legal.right-to-object.text2") }}</p>
+        <div>
+            <h3 app-heading-with-dot>{{ t("legal.right-to-object.title") }}</h3>
+            <p>{{ t("legal.right-to-object.text1") }}</p>
+            <p>{{ t("legal.right-to-object.text2") }}</p>
+        </div>
 
-        <h3>{{ t("legal.complaint-right.title") }}</h3>
-        <p>{{ t("legal.complaint-right.text") }}</p>
+        <div>
+            <h3 app-heading-with-dot>{{ t("legal.complaint-right.title") }}</h3>
+            <p>{{ t("legal.complaint-right.text") }}</p>
+        </div>
 
-        <h3>{{ t("legal.data-portability.title") }}</h3>
-        <p>{{ t("legal.data-portability.text") }}</p>
+        <div>
+            <h3 app-heading-with-dot>{{ t("legal.data-portability.title") }}</h3>
+            <p>{{ t("legal.data-portability.text") }}</p>
+        </div>
 
-        <h3>{{ t("legal.data-rights.title") }}</h3>
-        <p>{{ t("legal.data-rights.text") }}</p>
+        <div>
+            <h3 app-heading-with-dot>{{ t("legal.data-rights.title") }}</h3>
+            <p>{{ t("legal.data-rights.text") }}</p>
+        </div>
 
-        <h3>{{ t("legal.restriction.title") }}</h3>
-        <p>{{ t("legal.restriction.intro") }}</p>
-        <ul class="list-outside list-disc pl-4">
-            <li>{{ t("legal.restriction.case1") }}</li>
-            <li>{{ t("legal.restriction.case2") }}</li>
-            <li>{{ t("legal.restriction.case3") }}</li>
-            <li>{{ t("legal.restriction.case4") }}</li>
-        </ul>
-        <p>{{ t("legal.restriction.note") }}</p>
+        <div>
+            <h3 app-heading-with-dot>{{ t("legal.restriction.title") }}</h3>
+            <p>{{ t("legal.restriction.intro") }}</p>
+            <ul class="list-outside list-disc pl-4">
+                <li>{{ t("legal.restriction.case1") }}</li>
+                <li>{{ t("legal.restriction.case2") }}</li>
+                <li>{{ t("legal.restriction.case3") }}</li>
+                <li>{{ t("legal.restriction.case4") }}</li>
+            </ul>
+            <p>{{ t("legal.restriction.note") }}</p>
+        </div>
 
-        <h3>{{ t("legal.encryption.title") }}</h3>
-        <p>{{ t("legal.encryption.text1") }}</p>
-        <p>{{ t("legal.encryption.text2") }}</p>
+        <div>
+            <h3 app-heading-with-dot>{{ t("legal.encryption.title") }}</h3>
+            <p>{{ t("legal.encryption.text1") }}</p>
+            <p>{{ t("legal.encryption.text2") }}</p>
+        </div>
+    </section>
 
-        <h2>{{ t("data-collection.title") }}</h2>
+    <section>
+        <h2 app-heading-with-dot>{{ t("data-collection.title") }}</h2>
 
-        <h3>{{ t("data-collection.cookies.title") }}</h3>
-        <p>{{ t("data-collection.cookies.text") }}</p>
+        <div>
+            <h3 app-heading-with-dot>{{ t("data-collection.cookies.title") }}</h3>
+            <p>{{ t("data-collection.cookies.text") }}</p>
+        </div>
 
-        <h3>{{ t("data-collection.server-log-files.title") }}</h3>
-        <p>{{ t("data-collection.server-log-files.intro") }}</p>
-        <ul class="list-outside list-disc pl-4">
-            <li>{{ t("data-collection.server-log-files.item1") }}</li>
-            <li>{{ t("data-collection.server-log-files.item2") }}</li>
-            <li>{{ t("data-collection.server-log-files.item3") }}</li>
-            <li>{{ t("data-collection.server-log-files.item4") }}</li>
-            <li>{{ t("data-collection.server-log-files.item5") }}</li>
-            <li>{{ t("data-collection.server-log-files.item6") }}</li>
-        </ul>
-        <p>{{ t("data-collection.server-log-files.conclusion") }}</p>
+        <div>
+            <h3 app-heading-with-dot>{{ t("data-collection.server-log-files.title") }}</h3>
+            <p>{{ t("data-collection.server-log-files.intro") }}</p>
+            <ul class="list-outside list-disc pl-4">
+                <li>{{ t("data-collection.server-log-files.item1") }}</li>
+                <li>{{ t("data-collection.server-log-files.item2") }}</li>
+                <li>{{ t("data-collection.server-log-files.item3") }}</li>
+                <li>{{ t("data-collection.server-log-files.item4") }}</li>
+                <li>{{ t("data-collection.server-log-files.item5") }}</li>
+                <li>{{ t("data-collection.server-log-files.item6") }}</li>
+            </ul>
+            <p>{{ t("data-collection.server-log-files.conclusion") }}</p>
+        </div>
 
-        <h3>{{ t("data-collection.contact-form.title") }}</h3>
-        <p>{{ t("data-collection.contact-form.text") }}</p>
+        <div>
+            <h3 app-heading-with-dot>{{ t("data-collection.contact-form.title") }}</h3>
+            <p>{{ t("data-collection.contact-form.text") }}</p>
+        </div>
 
-        <h3>{{ t("data-collection.email-phone-fax-request.title") }}</h3>
-        <p>{{ t("data-collection.email-phone-fax-request.text") }}</p>
+        <div>
+            <h3 app-heading-with-dot>{{ t("data-collection.email-phone-fax-request.title") }}</h3>
+            <p>{{ t("data-collection.email-phone-fax-request.text") }}</p>
+        </div>
+    </section>
 
-        <h2>{{ t("plugins-and-tools.title") }}</h2>
-        <h3>{{ t("plugins-and-tools.google-fonts.title") }}</h3>
-        <p>
-            {{ t("plugins-and-tools.google-fonts.text1") }}
-            <a
-                class="link"
-                href="https://developers.google.com/fonts/faq"
-                target="_blank"
-                rel="noopener noreferrer"
-                >https://developers.google.com/fonts/faq</a
-            >
-            {{ t("plugins-and-tools.google-fonts.text2") }}
-            <a
-                class="link"
-                href="https://policies.google.com/privacy?hl=de"
-                target="_blank"
-                rel="noopener noreferrer"
-                >https://policies.google.com/privacy?hl=de</a
-            >.
-        </p>
-        <p>
-            <br />
-            {{ t("plugins-and-tools.google-fonts.text3") }}
-            <a
-                class="link"
-                href="https://www.e-recht24.de"
-                target="_blank"
-                rel="noopener noreferrer"
-                >https://www.e-recht24.de</a
-            >
-        </p>
-    </div>
-</section>
+    <section>
+        <h2 app-heading-with-dot>{{ t("plugins-and-tools.title") }}</h2>
+
+        <div>
+            <h3 app-heading-with-dot>{{ t("plugins-and-tools.google-fonts.title") }}</h3>
+            <p>
+                {{ t("plugins-and-tools.google-fonts.text1") }}
+                <a
+                    class="link"
+                    href="https://developers.google.com/fonts/faq"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >https://developers.google.com/fonts/faq</a
+                >
+                {{ t("plugins-and-tools.google-fonts.text2") }}
+                <a
+                    class="link"
+                    href="https://policies.google.com/privacy?hl=de"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >https://policies.google.com/privacy?hl=de</a
+                >.
+            </p>
+            <p>
+                {{ t("plugins-and-tools.google-fonts.text3") }}
+                <a
+                    class="link"
+                    href="https://www.e-recht24.de"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >https://www.e-recht24.de</a
+                >
+            </p>
+        </div>
+    </section>
+</article>

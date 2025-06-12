@@ -4,4 +4,15 @@
     @apply block;
     @apply bg-[var(--app-privacy-policy-bg-color)];
     @apply select-none text-justify break-words;
+
+    section,
+    div {
+        @apply mb-8;
+    }
+
+    p,
+    ul {
+        @apply text-justify break-words;
+        @apply mb-4;
+    }
 }

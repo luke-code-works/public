@@ -3,5 +3,16 @@
 
     @apply block;
     @apply bg-[var(--app-legal-notice-bg-color)];
-    @apply select-none text-justify break-words;
+    @apply select-none;
+
+    section,
+    div {
+        @apply mb-8;
+    }
+
+    p,
+    ul {
+        @apply text-justify break-words;
+        @apply mb-4;
+    }
 }
