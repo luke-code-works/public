@@ -1,0 +1,45 @@
+:host {
+    @reference "tailwindcss";
+    @apply block;
+    @apply leading-snug font-(family-name:--app-heading-with-dot-font) text-[var(--app-heading-with-dot-color)];
+    @apply select-none;
+
+    .dot {
+        @apply text-[var(--app-heading-with-dot-dot-color)];
+    }
+}
+
+:host(:is(h1)) {
+    // Page title
+    @apply mb-4 md:mb-6 font-bold;
+    font-size: clamp(32px, 5vw, 48px);
+}
+
+:host(:is(h2)) {
+    @apply mb-3 md:mb-5 font-bold; // Section title
+    font-size: clamp(24px, 4vw, 36px);
+}
+
+:host(:is(h3)) {
+    // Subsection title
+    @apply mb-2 md:mb-4 font-semibold;
+    font-size: clamp(18px, 3vw, 28px);
+}
+
+:host(:is(h4)) {
+    // Content heading
+    @apply mb-2 md:mb-3 font-medium;
+    font-size: clamp(16px, 2.5vw, 24px);
+}
+
+:host(:is(h5)) {
+    // Subcontent heading
+    @apply mb-1.5 md:mb-2 font-medium;
+    font-size: clamp(14px, 2vw, 18px); // 14px - 18px
+}
+
+:host(:is(h6)) {
+    // Minor heading
+    @apply mb-1 md:mb-1.5 font-normal;
+    font-size: clamp(12px, 1.5vw, 16px);
+}

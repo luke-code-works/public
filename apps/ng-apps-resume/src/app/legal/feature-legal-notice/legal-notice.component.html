@@ -1,7 +1,9 @@
-<section *transloco="let t; prefix: 'legalNotice'">
-    <div class="p-8 container mx-auto lg:max-w-screen-lg">
-        <h1 class="!mt-0">{{ t("title") }}</h1>
-        <h2>{{ t("provider.title") }}</h2>
+<article
+    *transloco="let t; prefix: 'legalNotice'"
+    class="p-8 container mx-auto lg:max-w-screen-lg">
+    <h1 app-heading-with-dot>{{ t("title") }}</h1>
+    <section>
+        <h2 app-heading-with-dot>{{ t("provider.title") }}</h2>
         <ul class="list-outside list-disc pl-4">
             <li>
                 <app-text-obfuscation [text]="t('provider.name') | xorCipher" />
@@ -21,35 +23,45 @@
                 <app-text-obfuscation [text]="t('provider.email.value') | xorCipher" />
             </li>
         </ul>
+    </section>
 
-        <!-- <h2>Social Media und andere Onlinepräsenzen</h2>
-        <p>Dieses Impressum gilt auch für die folgenden Social-Media-Präsenzen und Onlineprofile:</p>
-        <ul class="list-outside list-disc pl-4">
-            <li>
-                <a  class="link"
-                    href="https://"
-                    target="_blank">
-                    https://
-                </a>
-            </li>
-        </ul> -->
+    <!-- <h2 app-heading-with-dot>Social Media und andere Onlinepräsenzen</h2>
+    <p>Dieses Impressum gilt auch für die folgenden Social-Media-Präsenzen und Onlineprofile:</p>
+    <ul class="list-outside list-disc pl-4">
+        <li>
+            <a
+                class="link"
+                href="https://"
+                target="_blank">
+                https://
+            </a>
+        </li>
+    </ul> -->
 
-        <h2>{{ t("legal.title") }}</h2>
+    <section>
+        <h2 app-heading-with-dot>{{ t("legal.title") }}</h2>
 
-        <h3>{{ t("legal.disclaimer.title") }}</h3>
-        <p>{{ t("legal.disclaimer.text") }}</p>
+        <div>
+            <h3 app-heading-with-dot>{{ t("legal.disclaimer.title") }}</h3>
+            <p>{{ t("legal.disclaimer.text") }}</p>
+        </div>
 
-        <h3>{{ t("legal.external-links.title") }}</h3>
-        <p>{{ t("legal.external-links.text") }}</p>
+        <div>
+            <h3 app-heading-with-dot>{{ t("legal.external-links.title") }}</h3>
+            <p>{{ t("legal.external-links.text") }}</p>
+        </div>
 
-        <h3>{{ t("legal.copyright.title") }}</h3>
-        <p>{{ t("legal.copyright.text") }}</p>
+        <div>
+            <h3 app-heading-with-dot>{{ t("legal.copyright.title") }}</h3>
+            <p>{{ t("legal.copyright.text") }}</p>
+        </div>
 
-        <h3>{{ t("legal.violation-notice.title") }}</h3>
-        <p>{{ t("legal.violation-notice.text") }}</p>
+        <div>
+            <h3 app-heading-with-dot>{{ t("legal.violation-notice.title") }}</h3>
+            <p>{{ t("legal.violation-notice.text") }}</p>
+        </div>
 
         <p>
-            <br />
             <a
                 class="link"
                 href="https://datenschutz-generator.de/"
@@ -59,5 +71,5 @@
                 >{{ t("generator-credit.text") }}</a
             >
         </p>
-    </div>
-</section>
+    </section>
+</article>

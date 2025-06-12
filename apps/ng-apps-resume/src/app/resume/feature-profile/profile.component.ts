@@ -3,6 +3,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {provideTranslocoScope, translateSignal, TranslocoDirective} from '@jsverse/transloco';
 import {rxEffect} from 'ngxtension/rx-effect';
 import {of} from 'rxjs';
+import {HeadingWithDotComponent} from '../../shared/ui/heading-with-dot/heading-with-dot.component';
 import {useRouteFragments$} from '../../shared/util/route-fragment-navigation/route-fragment.functions';
 import {createTranslocoInlineLoader} from '../../shared/util/transloco/transloco-inline-loader-factory';
 import {ProfileCoverComponent} from '../ui/profile-cover/profile-cover.component';
@@ -16,7 +17,7 @@ const profileTranslocoScope = {
     selector: 'app-resume-profile',
     templateUrl: './profile.component.html',
     styleUrl: './profile.component.scss',
-    imports: [MatIconModule, TranslocoDirective, ProfileCoverComponent],
+    imports: [MatIconModule, TranslocoDirective, ProfileCoverComponent, HeadingWithDotComponent],
     providers: [provideTranslocoScope(profileTranslocoScope)],
 })
 export class ProfileComponent {
