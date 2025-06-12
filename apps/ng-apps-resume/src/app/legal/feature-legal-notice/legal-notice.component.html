@@ -1,8 +1,13 @@
 <article
     *transloco="let t; prefix: 'legalNotice'"
     class="p-8 container mx-auto lg:max-w-screen-lg">
-    <h1 app-heading-with-dot>{{ t("title") }}</h1>
-    <section>
+    <h1
+        app-heading-with-dot
+        appGsapScrollAnimate
+        >{{ t("title") }}</h1
+    >
+
+    <section appGsapScrollAnimate>
         <h2 app-heading-with-dot>{{ t("provider.title") }}</h2>
         <ul class="list-outside list-disc pl-4">
             <li>
@@ -39,29 +44,33 @@
     </ul> -->
 
     <section>
-        <h2 app-heading-with-dot>{{ t("legal.title") }}</h2>
+        <h2
+            app-heading-with-dot
+            appGsapScrollAnimate
+            >{{ t("legal.title") }}</h2
+        >
 
-        <div>
+        <div appGsapScrollAnimate>
             <h3 app-heading-with-dot>{{ t("legal.disclaimer.title") }}</h3>
             <p>{{ t("legal.disclaimer.text") }}</p>
         </div>
 
-        <div>
+        <div appGsapScrollAnimate>
             <h3 app-heading-with-dot>{{ t("legal.external-links.title") }}</h3>
             <p>{{ t("legal.external-links.text") }}</p>
         </div>
 
-        <div>
+        <div appGsapScrollAnimate>
             <h3 app-heading-with-dot>{{ t("legal.copyright.title") }}</h3>
             <p>{{ t("legal.copyright.text") }}</p>
         </div>
 
-        <div>
+        <div appGsapScrollAnimate>
             <h3 app-heading-with-dot>{{ t("legal.violation-notice.title") }}</h3>
             <p>{{ t("legal.violation-notice.text") }}</p>
         </div>
 
-        <p>
+        <p appGsapScrollAnimate>
             <a
                 class="link"
                 href="https://datenschutz-generator.de/"
