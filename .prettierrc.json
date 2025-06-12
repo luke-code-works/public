@@ -6,6 +6,7 @@
     "bracketSpacing": false,
     "singleQuote": true,
     "singleAttributePerLine": true,
+    "htmlWhitespaceSensitivity": "strict",
     "overrides": [
         {
             "files": ["**/*.css", "**/*.scss"],
