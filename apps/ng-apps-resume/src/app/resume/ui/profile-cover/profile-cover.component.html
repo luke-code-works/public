@@ -11,11 +11,15 @@
     class="p-8 container mx-auto flex items-center justify-center col-start-1 row-start-1 overflow-x-auto">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div class="row-start-2 md:row-start-1 max-lg:mx-auto">
-            <div class="mt-4 text-6xl font-bold text-nowrap select-none">
+            <div
+                class="mt-4 text-6xl font-bold text-nowrap select-none"
+                appGsapScrollAnimate>
                 <span>{{ t("cover.greeting") }}</span>
                 <span class="text-[#4a00de]"> {{ t("cover.name") }}</span>
             </div>
-            <div class="flex flex-col gap-y-2 mt-4 lg:text-lg select-none">
+            <div
+                class="flex flex-col gap-y-2 mt-4 lg:text-lg select-none"
+                appGsapScrollAnimate>
                 <div class="flex items-center gap-2">
                     <mat-icon>computer</mat-icon>
                     <span>{{ t("cover.profession") }}</span>
@@ -41,6 +45,7 @@
         <div class="col-start-1 md:col-start-2 flex justify-end items-center max-md:justify-center">
             <picture
                 class="w-72 overflow-hidden border-2 border-[#4a00de] shadow-2xl shadow-[#4a00de]/50"
+                appGsapScrollAnimate
                 style="border-radius: 70% 30% 48% 52% / 63% 42% 58% 37%">
                 <img
                     class="select-none"

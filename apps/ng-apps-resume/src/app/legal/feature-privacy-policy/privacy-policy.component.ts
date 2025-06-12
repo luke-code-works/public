@@ -1,5 +1,6 @@
 import {ChangeDetectionStrategy, Component} from '@angular/core';
 import {provideTranslocoScope, TranslocoDirective} from '@jsverse/transloco';
+import {GSAPScrollAnimateDirective} from '../../shared/ui/gsap-scroll-animate/gsap-scroll-animate.directive';
 import {HeadingWithDotComponent} from '../../shared/ui/heading-with-dot/heading-with-dot.component';
 import {TextObfuscationComponent} from '../../shared/ui/text-obfuscation/text-obfuscation.component';
 import {createTranslocoInlineLoader} from '../../shared/util/transloco/transloco-inline-loader-factory';
@@ -15,7 +16,13 @@ const privacyPolicyTranslocoScope = {
     templateUrl: './privacy-policy.component.html',
     styleUrl: './privacy-policy.component.scss',
     changeDetection: ChangeDetectionStrategy.OnPush,
-    imports: [TranslocoDirective, HeadingWithDotComponent, XorCipherPipe, TextObfuscationComponent],
+    imports: [
+        TranslocoDirective,
+        HeadingWithDotComponent,
+        XorCipherPipe,
+        TextObfuscationComponent,
+        GSAPScrollAnimateDirective,
+    ],
     providers: [provideTranslocoScope(privacyPolicyTranslocoScope)],
 })
 export class PrivacyPolicyComponent {}
