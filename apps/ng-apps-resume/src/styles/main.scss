@@ -17,28 +17,6 @@
     }
 }
 
-@mixin heading-defaults {
-    h1 {
-        @apply font-bold text-4xl uppercase;
-        @apply mt-12;
-    }
-
-    h2 {
-        @apply font-bold text-2xl uppercase;
-        @apply mt-8;
-    }
-
-    h3 {
-        @apply font-bold text-xl uppercase;
-        @apply mt-6;
-    }
-
-    h4 {
-        @apply font-bold text-lg;
-        @apply mt-3;
-    }
-}
-
 @mixin link-styles {
     .link {
         @apply text-[var(--link-color)];
@@ -64,6 +42,10 @@
     --link-color: #c6d2ff; // indigo-200
     --link-hover-color: #c6d2ff; // indigo-200
     --link-active-color: #fff;
+
+    --app-heading-with-dot-font: Outfit;
+    --app-heading-with-dot-color: #fff; // indigo-200
+    --app-heading-with-dot-dot-color: #4a00de;
 
     // TODO: Use or remove #0f1924;
     --root-bg-color: #0f002e;
@@ -137,6 +119,8 @@
 
 @mixin font-defaults() {
     body {
+        @apply leading-normal;
+        font-size: clamp(1rem, 1.5vw, 1.125rem);
         font-family: 'Open Sans', sans-serif;
     }
 }
@@ -156,7 +140,6 @@
     @include height-defaults();
     @include scrolling-defaults();
     @include font-defaults();
-    @include heading-defaults();
     @include color-scheme-styles();
 }
 
