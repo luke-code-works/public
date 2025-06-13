@@ -2,6 +2,7 @@
     "footer": {
         "navigation": {
             "label": "Richtlinien und Informationen",
+            "back-to-home": "Zurück zur Startseite",
             "legal-notice": "Impressum",
             "privacy-policy": "Datenschutzerklärung"
         },

@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 import {RouterLink, RouterLinkActive, RouterOutlet} from '@angular/router';
 import {provideTranslocoScope, TranslocoDirective} from '@jsverse/transloco';
+import {appRoutes} from '../app.routes';
 import {CopyrightNoticeComponent} from '../legal/ui/copyright-notice/copyright-notice.component';
 import {GitHubIconLinkComponent} from '../resume/ui/github-icon-link/github-icon-link.component';
 import {LinkedinIconLinkComponent} from '../resume/ui/linkedin-icon-link/linkedin-icon-link.component';
@@ -41,4 +42,7 @@ export const globalTranslocoScope = {
     ],
     providers: [provideNavigation(withRouteFragmentNavigation()), provideTranslocoScope(globalTranslocoScope)],
 })
-export class RootComponent {}
+export class RootComponent {
+    protected readonly defaultRedirectPath =
+        appRoutes.find((route) => route.path === '' && route.redirectTo != null)?.redirectTo ?? '';
+}
