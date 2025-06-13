@@ -18,22 +18,43 @@
     *transloco="let t; prefix: 'global'"
     app-footer-container>
     <nav
-        class="flex justify-center gap-6 mt-24 lg:mt-36 text-sm select-none"
+        class="flex flex-wrap justify-center gap-6 mt-24 lg:mt-36 text-sm select-none"
         [attr.aria-label]="t('footer.navigation.label')">
         <a
-            class="link"
+            class="menu-link"
+            [routerLink]="[defaultRedirectPath]"
+            [routerLinkActive]="['active']"
+            [attr.aria-label]="t('footer.navigation.back-to-home')">
+            {{ t("footer.navigation.back-to-home") }}
+        </a>
+        <a
+            class="menu-link"
             [routerLink]="['legal', 'legal-notice']"
             [routerLinkActive]="['active']"
             [attr.aria-label]="t('footer.navigation.legal-notice')">
             {{ t("footer.navigation.legal-notice") }}
         </a>
         <a
-            class="link"
+            class="menu-link"
             [routerLink]="['legal', 'privacy-policy']"
             [routerLinkActive]="['active']"
             [attr.aria-label]="t('footer.navigation.privacy-policy')">
             {{ t("footer.navigation.privacy-policy") }}
         </a>
+        @let localeTranslation =
+            t(
+                translocoService.getActiveLang() === "en-US"
+                    ? "footer.navigation.locale-de"
+                    : "footer.navigation.locale-en"
+            );
+        <button
+            class="menu-link cursor-pointer"
+            type="button"
+            [attr.aria-label]="localeTranslation"
+            [title]="localeTranslation"
+            (click)="toggleLocale()">
+            {{ localeTranslation }}
+        </button>
     </nav>
     <div
         class="mt-6 lg:mt-8 flex justify-center gap-10"

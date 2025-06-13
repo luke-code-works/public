@@ -36,7 +36,7 @@ function createSparklingStarsParticleConfig(animated: boolean): RecursivePartial
     return {
         preset: 'stars',
         fpsLimit: 8,
-        delay: 2,
+        delay: 1,
         fullScreen: false,
         background: {
             color: {

@@ -26,7 +26,7 @@ export const appConfig: ApplicationConfig = {
         ),
         provideI18nUsingTransloco({
             supportedLocales: ['en-US', 'de-DE'],
-            defaultLocale: 'en-US',
+            defaultLocale: 'de-DE',
             fallbackLocale: 'en-US',
         }),
     ],

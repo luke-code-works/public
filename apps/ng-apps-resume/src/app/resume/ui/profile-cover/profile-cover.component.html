@@ -1,50 +1,63 @@
+<!-- Background animated sparkling stars particles -->
 <app-sparkling-stars-particle-background
     class="col-start-1 row-start-1 -z-10"
     [id]="'profile'"
     [animated]="true" />
+
+<!-- Left glowing background circle -->
 <div
     class="-z-40 max-lg:hidden ml-[25%] mr-auto my-auto col-start-1 row-start-1 -translate-x-1/2 transform rounded-full border-[150px] border-b-blue-400 border-l-violet-600 border-r-pink-500 border-t-purple-400 blur-[240px]"></div>
+
+<!-- Right glowing background circle -->
 <div
     class="col-start-1 row-start-1 -z-40 ml-auto mr-[10%] my-auto rounded-full border-[150px] border-b-cyan-400 border-l-rose-600 border-r-indigo-500 border-t-blue-400 blur-[140px]"></div>
+
+<!-- Main cover section -->
 <div
     *transloco="let t; prefix: 'profile'"
-    class="p-8 container mx-auto flex items-center justify-center col-start-1 row-start-1 overflow-x-auto">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div class="row-start-2 md:row-start-1 max-lg:mx-auto">
-            <div
-                class="mt-4 text-6xl font-bold text-nowrap select-none"
+    class="p-8 container mx-auto flex items-center justify-center col-start-1 row-start-1">
+    <div class="flex flex-wrap-reverse gap-4 w-full">
+        <!-- Text block: Greeting, Name, and Info List -->
+        <div class="flex flex-col mx-auto">
+            <h1
+                class="mt-4"
+                style="font-size: clamp(48px, 10vw, 60px)"
+                app-heading-with-dot
                 appGsapScrollAnimate>
-                <span>{{ t("cover.greeting") }}</span>
-                <span class="text-[#4a00de]"> {{ t("cover.name") }}</span>
-            </div>
+                <span class="gradient">{{ t("cover.greeting") }}</span>
+                <span>&nbsp;</span>
+                <span>{{ t("cover.name") }}</span>
+            </h1>
             <div
-                class="flex flex-col gap-y-2 mt-4 lg:text-lg select-none"
+                class="flex flex-col gap-y-2 select-none"
                 appGsapScrollAnimate>
                 <div class="flex items-center gap-2">
-                    <mat-icon>computer</mat-icon>
+                    <mat-icon class="shrink-0">computer</mat-icon>
                     <span>{{ t("cover.profession") }}</span>
                 </div>
                 <div class="flex items-center gap-2">
-                    <mat-icon>badge</mat-icon>
+                    <mat-icon class="shrink-0">badge</mat-icon>
                     <span>{{ t("cover.work") }}</span>
                 </div>
                 <div class="flex items-center gap-2">
-                    <mat-icon>home_pin</mat-icon>
+                    <mat-icon class="shrink-0">home_pin</mat-icon>
                     <span>{{ t("cover.location") }}</span>
                 </div>
                 <div class="flex items-center gap-2">
-                    <mat-icon>sentiment_very_satisfied</mat-icon>
+                    <mat-icon class="shrink-0">sentiment_very_satisfied</mat-icon>
                     <span>{{ t("cover.marital-status") }}</span>
                 </div>
                 <div class="flex items-center gap-2">
-                    <mat-icon>sprint</mat-icon>
+                    <mat-icon class="shrink-0">sprint</mat-icon>
                     <span>{{ t("cover.hobbies") }}</span>
                 </div>
             </div>
         </div>
-        <div class="col-start-1 md:col-start-2 flex justify-end items-center max-md:justify-center">
+
+        <!-- Profile image -->
+        <div class="flex justify-center items-center mx-auto">
             <picture
-                class="w-72 overflow-hidden border-2 border-[#4a00de] shadow-2xl shadow-[#4a00de]/50"
+                class="w-72 overflow-hidden border-2 border-[#4a00de] shadow-2xl shadow-[#4a00de]/50 float-animation"
                 appGsapScrollAnimate
                 style="border-radius: 70% 30% 48% 52% / 63% 42% 58% 37%">
                 <img

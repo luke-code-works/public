@@ -4,6 +4,7 @@ import ScrollTrigger from 'gsap/ScrollTrigger';
 
 /**
  * Directive that animates an element into view using GSAP + ScrollTrigger.
+ * Inspired by https://www.reactbits.dev/animations/animated-content
  */
 @Directive({
     selector: '[appGsapScrollAnimate]',

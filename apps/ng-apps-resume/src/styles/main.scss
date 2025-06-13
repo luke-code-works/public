@@ -17,23 +17,48 @@
     }
 }
 
-@mixin link-styles {
+@mixin links {
     .link {
         @apply text-[var(--link-color)];
         @apply underline underline-offset-[6px] decoration-transparent;
 
-        transition:
-            color 200ms ease-in,
-            text-decoration-color 200ms ease-in;
+        @apply transition-colors duration-200 ease-in;
+        transition: text-decoration-color 200ms ease-in;
 
         &:hover {
             @apply text-[var(--link-hover-color)];
-            text-decoration-color: var(--link-hover-color);
+            text-decoration-color: var(--link-hover-underline-color);
         }
 
         &.active {
             @apply text-[var(--link-active-color)];
-            text-decoration-color: var(--link-active-color);
+            text-decoration-color: var(--link-active-underline-color);
+        }
+    }
+
+    .menu-link {
+        @extend .link;
+        @apply text-[var(--menu-link-color)];
+
+        &:hover {
+            @apply text-[var(--menu-link-hover-color)];
+        }
+
+        &.active {
+            @apply text-[var(--menu-link-active-color)];
+        }
+    }
+
+    .icon-link {
+        @apply text-[var(--icon-link-color)];
+        @apply transition-colors duration-200 ease-in;
+
+        &:hover {
+            @apply text-[var(--icon-link-hover-color)];
+        }
+
+        &.active {
+            @apply text-[var(--icon-link-active-color)];
         }
     }
 }
@@ -41,7 +66,17 @@
 .dark-scheme {
     --link-color: #c6d2ff; // indigo-200
     --link-hover-color: #c6d2ff; // indigo-200
-    --link-active-color: #fff;
+    --link-hover-underline-color: #4a00de;
+    --link-active-color: #c6d2ff; // indigo-200
+    --link-active-underline-color: #4a00de;
+
+    --menu-link-color: #fff;
+    --menu-link-hover-color: #fff;
+    --menu-link-active-color: #fff;
+
+    --icon-link-color: #fff;
+    --icon-link-hover-color: #4a00de;
+    --icon-link-active-color: #4a00de;
 
     --app-heading-with-dot-font: Outfit;
     --app-heading-with-dot-color: #fff; // indigo-200
@@ -64,7 +99,7 @@
 
     --app-legal-notice-bg-color: #0f002e;
     --app-legal-privacy-policy-bg-color: #0f002e;
-    --app-legal-copyright-notice-color: #c6d2ff;
+    --app-legal-copyright-notice-color: #fff;
 }
 
 @mixin color-scheme-styles {
@@ -144,5 +179,5 @@
 }
 
 @layer components {
-    @include link-styles();
+    @include links();
 }

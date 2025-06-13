@@ -1,6 +1,6 @@
 @for (routeFragment of routeFragmentNavigationService.routeFragments(); track $index) {
     <a
-        class="link p-3 select-none text-sm"
+        class="menu-link p-3 select-none text-sm"
         [routerLink]="['/']"
         [class.active]="activeRouteFragment() === routeFragment.id"
         [attr.aria-label]="routeFragment.label()"
