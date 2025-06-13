@@ -11,13 +11,13 @@ import {LogoTitleComponent} from '../shared/ui/logo-title/logo-title.component';
 import {RouteFragmentLinksComponent} from '../shared/ui/route-fragment-links/route-fragment-links.component';
 import {provideNavigation} from '../shared/util/navigation/provider';
 import {withRouteFragmentNavigation} from '../shared/util/route-fragment-navigation/provider';
-import {Locale, LOCALES} from '../shared/util/transloco/locale';
+import {Locale} from '../shared/util/transloco/locale';
 import {createTranslocoInlineLoader} from '../shared/util/transloco/transloco-inline-loader-factory';
 import {XorCipherPipe} from '../shared/util/xor-cipher/xor-cipher.pipe';
 
 export const globalTranslocoScope = {
     scope: 'global',
-    loader: createTranslocoInlineLoader((locale: Locale) => import(`../../i18n/global/${locale}.json`), [...LOCALES]),
+    loader: createTranslocoInlineLoader((locale: Locale) => import(`../../i18n/${locale}.json`), ['en-US', 'de-DE']),
 };
 
 @Component({
