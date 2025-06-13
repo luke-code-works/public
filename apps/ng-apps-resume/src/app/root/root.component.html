@@ -41,6 +41,20 @@
             [attr.aria-label]="t('footer.navigation.privacy-policy')">
             {{ t("footer.navigation.privacy-policy") }}
         </a>
+        @let localeTranslation =
+            t(
+                translocoService.getActiveLang() === "en-US"
+                    ? "footer.navigation.locale-de"
+                    : "footer.navigation.locale-en"
+            );
+        <button
+            class="menu-link cursor-pointer"
+            type="button"
+            [attr.aria-label]="localeTranslation"
+            [title]="localeTranslation"
+            (click)="toggleLocale()">
+            {{ localeTranslation }}
+        </button>
     </nav>
     <div
         class="mt-6 lg:mt-8 flex justify-center gap-10"

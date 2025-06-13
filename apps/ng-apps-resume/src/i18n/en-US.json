@@ -4,7 +4,9 @@
             "label": "Policies and Information",
             "back-to-home": "Back to home",
             "legal-notice": "Legal Notice",
-            "privacy-policy": "Privacy Policy"
+            "privacy-policy": "Privacy Policy",
+            "locale-en": "English",
+            "locale-de": "German"
         },
         "social": {
             "label": "Contact and social media",

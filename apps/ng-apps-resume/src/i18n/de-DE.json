@@ -4,7 +4,9 @@
             "label": "Richtlinien und Informationen",
             "back-to-home": "Zurück zur Startseite",
             "legal-notice": "Impressum",
-            "privacy-policy": "Datenschutzerklärung"
+            "privacy-policy": "Datenschutzerklärung",
+            "locale-en": "Englisch",
+            "locale-de": "Deutsch"
         },
         "social": {
             "label": "Kontakt und Social-Media",
