@@ -23,7 +23,8 @@
                     }
                 ],
                 "styles": ["apps/ng-apps-resume/src/styles/main.scss"],
-                "scripts": []
+                "scripts": [],
+                "allowedCommonJsDependencies": ["react", "@messageformat/core"]
             },
             "configurations": {
                 "production": {
