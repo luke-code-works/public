@@ -7,14 +7,10 @@ import {
     TranslocoConfig,
 } from '@jsverse/transloco';
 import {provideTranslocoLocale} from '@jsverse/transloco-locale';
-import {MessageformatConfig, provideTranslocoMessageformat} from '@jsverse/transloco-messageformat';
+import {MessageformatConfig} from '@jsverse/transloco-messageformat';
 import {provideTranslocoPersistLang} from '@jsverse/transloco-persist-lang';
 import {Locale} from './locale';
-import {
-    createMessageformatConfigWithDefault,
-    createPersistLangConfig,
-    createTranslocoConfigWithDefault,
-} from './transloco-config-factory';
+import {createPersistLangConfig, createTranslocoConfigWithDefault} from './transloco-config-factory';
 import {TranslocoErrorOnMissingHandler} from './transloco-error-on-missing-handler.service';
 
 type i18nWithTranslocoOptions = {
@@ -40,12 +36,12 @@ export function provideI18nUsingTransloco(options?: i18nWithTranslocoOptions): E
                 options?.overridingTranslocoConfig,
             ),
         ),
-        provideTranslocoMessageformat(
-            createMessageformatConfigWithDefault(
-                options?.supportedLocales ?? ['en-US'],
-                options?.overridingMessageformatConfig,
-            ),
-        ),
+        // provideTranslocoMessageformat(
+        //     createMessageformatConfigWithDefault(
+        //         options?.supportedLocales ?? ['en-US'],
+        //         options?.overridingMessageformatConfig,
+        //     ),
+        // ),
         provideTranslocoPersistLang(createPersistLangConfig()),
     ]);
 }
