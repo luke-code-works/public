@@ -17,7 +17,6 @@ const profileTranslocoScope = {
 @Component({
     selector: 'app-resume-profile',
     templateUrl: './profile.component.html',
-    styleUrl: './profile.component.scss',
     imports: [
         MatIconModule,
         TranslocoDirective,
