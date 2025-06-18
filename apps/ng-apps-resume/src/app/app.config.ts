@@ -1,8 +1,12 @@
+import {provideHttpClient} from '@angular/common/http';
 import {ApplicationConfig, provideZoneChangeDetection} from '@angular/core';
 import {provideRouter, withInMemoryScrolling} from '@angular/router';
 import {appRoutes} from './app.routes';
 import {provideMaterialSymbols} from './shared/util/material-symbols/provider';
 import {provideI18nUsingTransloco} from './shared/util/transloco/providers';
+import {trustScriptUrlByOrigins} from './shared/util/trusted-types/functions';
+import {provideDOMPurifyTrustedType} from './shared/util/trusted-types/provider';
+import {provideUmami} from './shared/util/umami/provider';
 import {provideDefaultXorCipherDefaultKey} from './shared/util/xor-cipher/provider';
 
 export const appConfig: ApplicationConfig = {
@@ -12,6 +16,7 @@ export const appConfig: ApplicationConfig = {
             appRoutes,
             withInMemoryScrolling({anchorScrolling: 'enabled', scrollPositionRestoration: 'enabled'}),
         ),
+        provideHttpClient(),
         provideMaterialSymbols(),
         provideDefaultXorCipherDefaultKey(
             (() => {
@@ -29,5 +34,9 @@ export const appConfig: ApplicationConfig = {
             defaultLocale: 'de-DE',
             fallbackLocale: 'en-US',
         }),
+        provideDOMPurifyTrustedType({
+            createScriptURL: (input: string) => trustScriptUrlByOrigins(input, ['cloud.umami.is']),
+        }),
+        provideUmami(),
     ],
 };

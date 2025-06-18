@@ -1,0 +1,7 @@
+{
+    "umami": {
+        "enabled": true,
+        "scriptUrl": "UMAMI_SCRIPT_URL",
+        "websiteId": "UMAMI_WEBSITE_ID"
+    }
+}
