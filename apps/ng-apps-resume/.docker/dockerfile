@@ -9,3 +9,5 @@ RUN apk add dos2unix && dos2unix *
 WORKDIR /usr/share/nginx/html
 RUN rm -rf *
 COPY dist/apps/ng-apps-resume .
+
+VOLUME /usr/share/nginx/html/browser/config
