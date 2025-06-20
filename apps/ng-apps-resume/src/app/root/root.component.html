@@ -18,7 +18,7 @@
     *transloco="let t; prefix: 'global'"
     app-footer-container>
     <nav
-        class="flex flex-wrap justify-center gap-6 mt-24 lg:mt-36 text-sm select-none"
+        class="flex flex-wrap justify-center gap-6 mt-24 lg:mt-36 mx-2 text-sm select-none"
         [attr.aria-label]="t('footer.navigation.label')">
         <a
             class="menu-link"
@@ -57,7 +57,7 @@
         </button>
     </nav>
     <div
-        class="mt-6 lg:mt-8 flex justify-center gap-10"
+        class="mt-6 lg:mt-8 mx-2 flex justify-center gap-10"
         role="group"
         [attr.aria-label]="t('footer.social.label')">
         <app-resume-mail-icon-link
@@ -73,5 +73,5 @@
             [href]="t('footer.social.github.link') | xorCipher"
             [label]="t('footer.social.github.label')" />
     </div>
-    <app-legal-copyright-notice class="mt-6 lg:mt-8 mb-14" />
+    <app-legal-copyright-notice class="mt-6 lg:mt-8 mb-14 mx-2" />
 </footer>
