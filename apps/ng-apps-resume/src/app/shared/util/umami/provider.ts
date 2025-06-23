@@ -1,6 +1,7 @@
-import {provideAppInitializer} from '@angular/core';
-import {initializeUmami$} from './functions';
+import {makeEnvironmentProviders, provideAppInitializer} from '@angular/core';
+import {initializeUmami$} from './umami-init.functions';
+import {UmamiProxyService} from './umami-proxy.service';
 
 export function provideUmami() {
-    return provideAppInitializer(initializeUmami$);
+    return makeEnvironmentProviders([provideAppInitializer(initializeUmami$), UmamiProxyService]);
 }
