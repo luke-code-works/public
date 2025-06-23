@@ -11,6 +11,7 @@ import {HeaderContainerComponent} from '../shared/ui/header-container/header-con
 import {LogoTitleComponent} from '../shared/ui/logo-title/logo-title.component';
 import {RouteFragmentLinksComponent} from '../shared/ui/route-fragment-links/route-fragment-links.component';
 import {UmamiOptOutDirective} from '../shared/ui/umami-opt-out/umami-opt-out.directive';
+import {UmamiTrackEventDirective} from '../shared/ui/umami-track-event/umami-track-event.directive';
 import {provideNavigation} from '../shared/util/navigation/provider';
 import {withRouteFragmentNavigation} from '../shared/util/route-fragment-navigation/provider';
 import {Locale} from '../shared/util/transloco/locale';
@@ -41,6 +42,7 @@ export const globalTranslocoScope = {
         CopyrightNoticeComponent,
         MailIconLinkComponent,
         UmamiOptOutDirective,
+        UmamiTrackEventDirective,
     ],
     providers: [provideNavigation(withRouteFragmentNavigation()), provideTranslocoScope(globalTranslocoScope)],
 })
