@@ -41,7 +41,7 @@ export class UmamiProxyService {
     async disableTracking() {
         const umami = getUmami();
 
-        umami.track('tracking-disabled');
+        umami.track('disabled');
         localStorage.setItem(umamiDisabledStorageKey, '1');
     }
 }

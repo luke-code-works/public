@@ -74,8 +74,10 @@
             <a
                 class="link"
                 href="https://datenschutz-generator.de/"
+                appUmamiTrackEvent
                 target="_blank"
                 rel="noopener noreferrer nofollow"
+                [trackEvents]="[{event: 'click', name: 'outbound-datenschutz-generator'}]"
                 [title]="t('generator-credit.title')"
                 >{{ t("generator-credit.text") }}</a
             >

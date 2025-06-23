@@ -221,16 +221,20 @@
                 <a
                     class="link"
                     href="https://developers.google.com/fonts/faq"
+                    appUmamiTrackEvent
                     target="_blank"
                     rel="noopener noreferrer"
+                    [trackEvents]="[{event: 'click', name: 'outbound-google-fonts'}]"
                     >https://developers.google.com/fonts/faq</a
                 >
                 {{ t("plugins-and-tools.google-fonts.text2") }}
                 <a
                     class="link"
                     href="https://policies.google.com/privacy?hl=de"
+                    appUmamiTrackEvent
                     target="_blank"
                     rel="noopener noreferrer"
+                    [trackEvents]="[{event: 'click', name: 'outbound-google-fonts-privacy'}]"
                     >https://policies.google.com/privacy?hl=de</a
                 >.
             </p>
@@ -239,8 +243,10 @@
                 <a
                     class="link"
                     href="https://www.e-recht24.de"
+                    appUmamiTrackEvent
                     target="_blank"
                     rel="noopener noreferrer"
+                    [trackEvents]="[{event: 'click', name: 'outbound-erecht24'}]"
                     >https://www.e-recht24.de</a
                 >
             </p>
