@@ -55,9 +55,8 @@ export function appendUmamiScript(
     script.async = true;
     script.defer = true;
     script.setAttribute('data-website-id', config.websiteId);
-    const trustedScriptUrl =
-        deps.domPurifyTrustedTypesService.policy?.createScriptURL(config.scriptUrl) ?? config.scriptUrl;
-    script.src = String(trustedScriptUrl);
+    script.src = (deps.domPurifyTrustedTypesService.policy?.createScriptURL(config.scriptUrl) ??
+        config.scriptUrl) as unknown as string;
 
     deps.document.head.appendChild(script);
 }
