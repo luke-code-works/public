@@ -3,9 +3,9 @@ import {MatSnackBar} from '@angular/material/snack-bar';
 import {UmamiProxyService} from '../../util/umami/umami-proxy.service';
 
 @Directive({
-    selector: '[appUmamiHiddenOptOut]',
+    selector: '[appUmamiOptOut]',
 })
-export class UmamiHiddenOptOutDirective {
+export class UmamiOptOutDirective {
     private readonly umamiService = inject(UmamiProxyService);
     private snackBar = inject(MatSnackBar);
 
@@ -15,7 +15,7 @@ export class UmamiHiddenOptOutDirective {
     click() {
         this.clickCount.update((x) => x + 1);
 
-        if (this.clickCount() === 7) {
+        if (this.clickCount() === 10) {
             this.umamiService.disableTracking();
             this.snackBar.open('Umami tracking disabled.', 'Dismiss', {
                 duration: 3000,
