@@ -10,6 +10,7 @@ import {FooterContainerComponent} from '../shared/ui/footer-container/footer-con
 import {HeaderContainerComponent} from '../shared/ui/header-container/header-container.component';
 import {LogoTitleComponent} from '../shared/ui/logo-title/logo-title.component';
 import {RouteFragmentLinksComponent} from '../shared/ui/route-fragment-links/route-fragment-links.component';
+import {UmamiHiddenOptOutDirective} from '../shared/ui/umami-hidden-opt-out/umami-hidden-opt-out.directive';
 import {provideNavigation} from '../shared/util/navigation/provider';
 import {withRouteFragmentNavigation} from '../shared/util/route-fragment-navigation/provider';
 import {Locale} from '../shared/util/transloco/locale';
@@ -39,6 +40,7 @@ export const globalTranslocoScope = {
         TranslocoDirective,
         CopyrightNoticeComponent,
         MailIconLinkComponent,
+        UmamiHiddenOptOutDirective,
     ],
     providers: [provideNavigation(withRouteFragmentNavigation()), provideTranslocoScope(globalTranslocoScope)],
 })
