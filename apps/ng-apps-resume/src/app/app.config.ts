@@ -29,6 +29,7 @@ export const appConfig: ApplicationConfig = {
                 return part1 + part2 + part3 + part4 + part5;
             })(),
         ),
+        // TODO: Use getBrowserCultureLang()
         provideI18nUsingTransloco({
             supportedLocales: ['en-US', 'de-DE'],
             defaultLocale: 'de-DE',
