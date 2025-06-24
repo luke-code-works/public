@@ -24,7 +24,10 @@
                 ],
                 "styles": ["apps/ng-apps-resume/src/styles/main.scss"],
                 "scripts": [],
-                "allowedCommonJsDependencies": ["react", "@messageformat/core"]
+                "allowedCommonJsDependencies": ["react", "@messageformat/core"],
+                "security": {
+                    "autoCsp": true
+                }
             },
             "configurations": {
                 "production": {
