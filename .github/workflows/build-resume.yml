@@ -1,4 +1,4 @@
-name: Build luke-code-works/resume:latest
+name: Build resume image
 
 on:
     workflow_dispatch:
@@ -40,10 +40,10 @@ jobs:
                   load: true
 
             - name: Save docker image
-              run: docker save "${{ env.IMAGE_TAG }}" | gzip > resume_latest.tar.gz
+              run: docker save "${{ env.IMAGE_TAG }}" | gzip > resume.tar.gz
 
             - name: Upload docker image as artifact
               uses: actions/upload-artifact@v4
               with:
-                  name: resume_latest
-                  path: resume_latest.tar.gz
+                  name: resume
+                  path: resume.tar.gz
