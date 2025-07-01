@@ -1,4 +1,4 @@
-name: Build resume image
+name: Build and Package
 
 on:
     workflow_dispatch:
@@ -8,7 +8,7 @@ on:
                 default: 'luke-code-works/resume:latest'
 
 jobs:
-    build:
+    build-resume:
         runs-on: ubuntu-latest
         env:
             IMAGE_TAG: ${{ inputs.image_tag }}
@@ -47,3 +47,4 @@ jobs:
               with:
                   name: resume
                   path: resume.tar.gz
+                  retention-days: 1
