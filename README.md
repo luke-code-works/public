@@ -116,3 +116,5 @@ However, you are **not permitted** to:
 - Use it in commercial or non-commercial projects
 
 📩 For special permission or inquiries, contact the owner: [luke-code-works.de](https://luke-code-works.de)
+
+See LICENSE.md for full legal terms, including disclaimer of warranty and liability.
